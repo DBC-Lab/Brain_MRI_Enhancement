@@ -1,5 +1,5 @@
 deploy.prototxt: deploy file used for testing stage
 
-###Pretrained models
+### Pretrained models
 
-reconstruction_0m_T1.caffemodel: 
+reconstruction_??m_T1.caffemodel: pretrained models used to test images at ?? months.
