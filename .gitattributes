@@ -1,0 +1,9 @@
+README.md filter=lfs diff=lfs merge=lfs -text
+Templates filter=lfs diff=lfs merge=lfs -text
+Testing_subjects filter=lfs diff=lfs merge=lfs -text
+solver.prototxt filter=lfs diff=lfs merge=lfs -text
+train.prototxt filter=lfs diff=lfs merge=lfs -text
+Pretrained_models filter=lfs diff=lfs merge=lfs -text
+Reconstruction_T1_test.py filter=lfs diff=lfs merge=lfs -text
+Training_datasets filter=lfs diff=lfs merge=lfs -text
+Training_files filter=lfs diff=lfs merge=lfs -text
