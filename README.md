@@ -10,8 +10,6 @@ This manuscript describes a flexible and easy-to-implement method for significan
 
    In folder: ***Training_files***
    
-
-   
 ## System requirements:
 
     Ubuntu 18.04.5
