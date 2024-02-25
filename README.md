@@ -20,19 +20,19 @@ This manuscript describes a flexible and easy-to-implement method for significan
     
     To make sure of consistency with our used version (e.g., including 3d convolution, and WeightedSoftmaxWithLoss, etc.), we strongly recommend installing _Caffe_ using our released ***caffe_rc3***. The installation steps are easy to perform without compilation procedure: 
     
-    a. Download ***caffe_rc3*** and ***caffe_lib***.
+### a. Download ***caffe_rc3*** and ***caffe_lib***.
     
     caffe_rc3: <https://github.com/YueSun814/caffe_rc3>
     
     caffe_lib: <https://github.com/YueSun814/caffe_lib>
     
-    b. Add paths of _caffe_lib_, and _caffe_rc3/python_ to your _~/.bashrc_ file. For example, if the folders are saved in the home path, then add the following commands to the _~/.bashrc_ 
+### b. Add paths of _caffe_lib_, and _caffe_rc3/python_ to your _~/.bashrc_ file. For example, if the folders are saved in the home path, then add the following commands to the _~/.bashrc_ 
    
    `export LD_LIBRARY_PATH=~/caffe_lib:$LD_LIBRARY_PATH`
    
    `export PYTHONPATH=~/caffe_rc3/python:$PATH`
     
-    c. Test Caffe 
+### c. Test Caffe 
     
     `cd caffe_rc3/build/tools`
     
