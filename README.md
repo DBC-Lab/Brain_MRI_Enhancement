@@ -6,18 +6,6 @@
 ## Method
 This manuscript describes a flexible and easy-to-implement method for significantly improving the quality of brain MR images through motion removal, super resolution, and denoising. 
 
-### File descriptions
-> Template
-
->> Template_T1_24.xxx: a template for histogram matching of T1w images (24 months).
-
-> Testing_subjects
-
->> The subjects in the folder ***Testing_subjects*** are only randomly selected examples for the model testing.
-
->> subject-x-T1.xxx: the T1w MRI. 
-
-
 ### Steps:
 1. System requirements:
 
@@ -51,8 +39,8 @@ This manuscript describes a flexible and easy-to-implement method for significan
     
     Typical install time: few minutes.
    
-2. Testing steps:
-   In folder: ***Pretrained_models***
+2. Training steps:
+   In folder: ***Training_files***
     
 
 
