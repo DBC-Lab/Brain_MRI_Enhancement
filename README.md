@@ -6,13 +6,13 @@
 ## Method
 This manuscript describes a flexible and easy-to-implement method for significantly improving the quality of brain MR images through motion removal, super resolution, and denoising. 
 
-### Training steps:
+## Training steps:
 
    In folder: ***Training_files***
    
 
    
-### System requirements:
+## System requirements:
 
     Ubuntu 18.04.5
     
