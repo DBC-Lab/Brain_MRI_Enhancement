@@ -9,8 +9,6 @@ from scipy import ndimage as nd
 
 # Make sure that caffe is on the python path:
 caffe_root = '/usr/local/InfantPipeline/lib/caffe/'
-#caffe_root = '/home/dongnie/caffe3D/'  # this is the path in GPU server
-#caffe_root = '/usr/bin/caffe'  # this is the path in GPU server
 import sys
 sys.path.insert(0, caffe_root + 'python')
 #print(caffe_root + 'python')
