@@ -16,9 +16,9 @@ This manuscript describes a flexible and easy-to-implement method for significan
 
 ## Testing steps:
 
-   1. In folder ***Pretrained_models***: there are eight pretrained models used for testing images at different ages.
-   2. In folder ***Templates***: there are corresponding eight images templates for histogram matching.
-   3. In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz).
+   1. In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
+   2. In folder ***Templates***: the corresponding eight images templates for histogram matching.
+   3. In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz) after performing step 4.
    4. Test an image: 
       
     python Reconstruction_T1_test.py    
