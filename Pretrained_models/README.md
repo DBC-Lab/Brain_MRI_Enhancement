@@ -1,4 +1,4 @@
-deploy.prototxt: deploy file used for testing stage
+deploy.prototxt: a deploy file used for testing stage
 
 ## Pretrained models:
 
