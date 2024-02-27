@@ -10,7 +10,8 @@ This manuscript describes a flexible and easy-to-implement method for significan
 
    In folder: ***Training_files***
    1. Download training samples (hdf5 data) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0. More information about hdf5 data is avaliable at <https://www.mathworks.com/help/matlab/hdf5-files.html>.
-   2. Train a caffe model: caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
+   2. Train a caffe model:
+       caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
    
 ## System requirements:
 
