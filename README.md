@@ -13,6 +13,13 @@ This manuscript describes a flexible and easy-to-implement method for significan
    2. Train a caffe model:
       
     caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
+
+## Testing steps:
+
+   1. Test an image: 
+      
+    python Reconstruction_T1_test.py    
+    
    
 ## System requirements:
 
