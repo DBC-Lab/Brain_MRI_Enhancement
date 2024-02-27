@@ -2,10 +2,12 @@ Please download template files from https://www.dropbox.com/scl/fo/ak1shjeg5z0tc
 
 These template files are used for ***histogram matching*** before testing an image. 
 
-### T2-weighted images:
+## T2-weighted images:
+
 Template_T1_fetal.xxx: templates for testing images at the fetal stage. 
 
-### T1-weighted images:
+## T1-weighted images:
+
 Template_T1_0.xxx: templates for testing images at 0 month. 
 
 Template_T1_3.xxx: templates for testing images at 3 months.
