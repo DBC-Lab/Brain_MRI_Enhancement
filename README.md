@@ -20,9 +20,9 @@ To make sure of consistency with our used version (e.g., including 3d convolutio
     
 ### a. Download ***caffe_rc3*** and ***caffe_lib***.
     
-    caffe_rc3: <https://github.com/YueSun814/caffe_rc3>
+caffe_rc3: <https://github.com/YueSun814/caffe_rc3>
     
-    caffe_lib: <https://github.com/YueSun814/caffe_lib>
+caffe_lib: <https://github.com/YueSun814/caffe_lib>
     
 ### b. Add paths of _caffe_lib_, and _caffe_rc3/python_ to your _~/.bashrc_ file. For example, if the folders are saved in the home path, then add the following commands to the _~/.bashrc_ 
    
@@ -36,11 +36,11 @@ To make sure of consistency with our used version (e.g., including 3d convolutio
     
     `./caffe`
     
-    Then, the screen will show:  
+Then, the screen will show:  
     
-    <img src="https://github.com/YueSun814/Img-folder/blob/main/caffe_display.jpg" width="50%">
+<img src="https://github.com/YueSun814/Img-folder/blob/main/caffe_display.jpg" width="50%">
     
-    Typical install time: few minutes.
+Typical install time: few minutes.
    
 
     
