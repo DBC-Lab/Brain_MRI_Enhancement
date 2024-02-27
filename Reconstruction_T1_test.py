@@ -8,7 +8,7 @@ import scipy.io as scio
 from scipy import ndimage as nd
 
 # Make sure that caffe is on the python path:
-caffe_root = '/usr/local/InfantPipeline/lib/caffe/'
+caffe_root = '~/caffe_rc3/'
 import sys
 sys.path.insert(0, caffe_root + 'python')
 #print(caffe_root + 'python')
