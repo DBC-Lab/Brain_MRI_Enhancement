@@ -1,4 +1,4 @@
-# Brain MRI Enhancement for Motion Removal, Super Resolution, Denoising and Multiple Extensions
+# Lifespan Brain MRI Enhancement for Motion Removal, Super Resolution, Denoising and Multiple Extensions
 
 ### Structural magnetic resonance (MR) imaging is a vital tool for neuroimaging analyses, but the quality of MR images is often degraded by various factors, such as motion artifacts, large slice thickness, and imaging noise. These factors can cause confounding effects and pose significant challenges, especially in young children who tend to move during acquisition.
 <img src="https://github.com/YueSun814/Img-folder/blob/main/Flowchart_Reconstruction.jpg" width="100%">
