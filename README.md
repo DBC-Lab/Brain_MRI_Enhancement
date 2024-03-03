@@ -27,7 +27,9 @@ This manuscript describes a flexible and easy-to-implement method for significan
 ## Testing steps:
 
    In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
+   
    In folder ***Templates***: the corresponding eight images templates for histogram matching.
+   
    In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz).
    
    Test an image: 
