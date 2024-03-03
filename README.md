@@ -26,14 +26,14 @@ This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Ne
 
 ## Testing steps:
 
-   1. In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
-   2. In folder ***Templates***: the corresponding eight images templates for histogram matching.
-   3. In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz) after performing step 4.
-   4. Test an image: 
-      
-    python Reconstruction_T1_test.py    
-    
+   In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
+   In folder ***Templates***: the corresponding eight images templates for histogram matching.
+   In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz).
    
+   Test an image: 
+    1. Performing histogram matching for testing images with provided templates (in folder ***Templates***). 
+    2. python Reconstruction_T1_test.py    
+    
 ## System requirements:
 
 Ubuntu 20.04.1
