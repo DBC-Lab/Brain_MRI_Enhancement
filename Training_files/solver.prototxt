@@ -3,11 +3,11 @@ net: "train.prototxt"
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of iris, we have test batch size 10 (specified in iris_network.prototxt)
 # and 100 test iterations covering the full 50 test vectors.
-test_iter: 100
+test_iter: 100  
 
 #iter_size*batch_szie=constant
-iter_size: 3
-# Carry out testing every 1000 training iterations.
+iter_size: 3 
+# Carry out testing every 100 training iterations.
 test_interval: 100
 # The base learning rate, momentum and the weight decay of the network.
 base_lr: 0.005
@@ -34,7 +34,7 @@ display: 100
 max_iter: 5000000 #define it according to your dataset
 # snapshot intermediate results
 snapshot: 1000
-snapshot_prefix: "all"
+snapshot_prefix: "./"
 # solver mode: CPU or GPU
 #optimizer type: SGD by default. 
 #type:"Adam"
