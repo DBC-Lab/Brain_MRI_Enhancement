@@ -14,15 +14,15 @@ This manuscript describes a flexible and easy-to-implement method for significan
       
     caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
 
-***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
+   ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
-***-gpu***: set GPU number.
+   ***-gpu***: set GPU number.
 
-***train.log***: a log file to record the model training stage.
+   ***train.log***: a log file to record the model training stage.
 
-***train.prototxt***: network architecture.
+   ***train.prototxt***: network architecture.
 
-This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of "L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419."
+   This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of "L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419."
 
 ## Testing steps:
 
