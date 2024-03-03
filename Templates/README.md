@@ -4,7 +4,7 @@ These template files are used for ***histogram matching*** before testing an ima
 
 ## T2-weighted images:
 
-Template_T1_fetal.xxx: templates for testing images at the fetal stage. 
+Template_T2_fetal.xxx: templates for testing images at the fetal stage. 
 
 ## T1-weighted images:
 
