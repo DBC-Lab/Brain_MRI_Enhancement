@@ -19,21 +19,24 @@ caffe.set_mode_gpu()
 ### load the solver and create train and test nets
 solver = None  # ignore this workaround for lmdb data (can't instantiate two solvers on the same data)
 protopath='Pretrained_models/'    #the path to accesss pretrained models and deploy.prototxt
-mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)     #change pretrained models to match the age of test image, "reconstruction_24m_T1.caffemodel" is used to test images at 24 months and older
+
+#change pretrained models to match the age of test image, "reconstruction_24m_T1.caffemodel" is used to test images at 24 months and older
+mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)     
 print("blobs {}\nparams {}".format(mynet.blobs.keys(), mynet.params.keys()))
 
 d1=40
 d2=40
 d3=40
-dFA=[d1,d2,d3]
-dSeg=[40,40,40]
+dFA=[d1,d2,d3]  #patch size: 40*40*40
+dSeg=[40,40,40]  #equal or smaller than patch size, to avoid margin issue when testing 
 
+#step size, usually set as [8, 16]
 step1=12
 step2=12
 step3=12
 
 step=[step1,step2,step3]
-NumOfClass=4 #the number of classes in this segmentation project
+NumOfClass=4 #the number of classes in this segmentation project, e.g., WM, GM, CSF and background in this case
     
 def cropCubic(matFA,fileID,d,step,rate):
     eps=1e-5
