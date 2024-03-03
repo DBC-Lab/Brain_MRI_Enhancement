@@ -32,8 +32,10 @@ This manuscript describes a flexible and easy-to-implement method for significan
    
    In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz).
    
-   Test an image: 
+   ### Test an image: 
+   
     1. Performing histogram matching for testing images with provided templates (in folder ***Templates***). 
+    
     2. python Reconstruction_T1_test.py    
     
 ## System requirements:
