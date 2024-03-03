@@ -6,9 +6,9 @@ Please download training datasets (*.hdf5) from https://www.dropbox.com/scl/fo/8
 
     caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 & 
 
-***solver.prototxt***: set up your own learning rate, network, saving path, etc.
+***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
-***-gpu***: set up your gpu number
+***-gpu***: set your gpu number
 
 ***train.log***: a log file to record the model training stage
 
