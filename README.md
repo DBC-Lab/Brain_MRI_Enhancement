@@ -4,7 +4,7 @@
 <img src="https://github.com/YueSun814/Img-folder/blob/main/Flowchart_Reconstruction.png" width="100%">
 
 ## Method
-This manuscript describes a flexible and easy-to-implement method for significantly improving the quality of brain MR images through motion removal, super resolution, and denoising. 
+This manuscript describes a novel tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
 
 ## Training steps:
 
