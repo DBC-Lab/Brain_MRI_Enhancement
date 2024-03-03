@@ -8,9 +8,9 @@ Please download training datasets (*.hdf5) from https://www.dropbox.com/scl/fo/8
 
 ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
-***-gpu***: set your gpu number
+***-gpu***: set GPU number.
 
-***train.log***: a log file to record the model training stage
+***train.log***: a log file to record the model training stage.
 
 ***train.prototxt***: network architecture.
 
