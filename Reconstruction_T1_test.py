@@ -8,18 +8,18 @@ import scipy.io as scio
 from scipy import ndimage as nd
 
 # Make sure that caffe is on the python path:
-caffe_root = '~/caffe_rc3/'
+caffe_root = '~/caffe_rc3/'  # Make sure that caffe is on the python path  
 import sys
 sys.path.insert(0, caffe_root + 'python')
 #print(caffe_root + 'python')
 import caffe
 
-caffe.set_device(0)#very important
+caffe.set_device(0) #set your GPU number
 caffe.set_mode_gpu()
 ### load the solver and create train and test nets
 solver = None  # ignore this workaround for lmdb data (can't instantiate two solvers on the same data)
-protopath='Pretrained_models/'
-mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)
+protopath='Pretrained_models/'    #the path to accesss pretrained models and deploy.prototxt
+mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)     #change pretrained models to match the age of test image, "reconstruction_24m_T1.caffemodel" is used to test images at 24 months and older
 print("blobs {}\nparams {}".format(mynet.blobs.keys(), mynet.params.keys()))
 
 d1=40
