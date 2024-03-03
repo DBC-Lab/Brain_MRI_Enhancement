@@ -36,7 +36,8 @@ This manuscript describes a flexible and easy-to-implement method for significan
    
    1. Performing histogram matching for testing images with provided templates (in folder ***Templates***). 
     
-   2. python Reconstruction_T1_test.py    
+   2.
+      python Reconstruction_T1_test.py    
     
 ## System requirements:
 
