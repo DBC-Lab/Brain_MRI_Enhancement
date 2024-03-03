@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e1937e7d93217099ee6f96ae645a2c328855eeb3d9fc18dc5ffb36c9c819728
-size 1214
+# The train/test net protocol buffer definition
+net: "train.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of iris, we have test batch size 10 (specified in iris_network.prototxt)
+# and 100 test iterations covering the full 50 test vectors.
+test_iter: 100
+
+#iter_size*batch_szie=constant
+iter_size: 3
+# Carry out testing every 1000 training iterations.
+test_interval: 100
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.005
+momentum: 0.9
+weight_decay: 0.0005
+# The learning rate policy: inv make the learning rate gradually decreases automatically
+#lr_policy: "inv"
+#gamma: 0.0001
+
+#The learning rate policy: step make the learning rate step decrease (*0.1) automatically
+lr_policy: "step"
+gamma: 0.1
+
+stepsize: 222  #according to your used training sample number (from train_dataset.txt), iter_size (from solver.prototxt) and batch_size (from train.prototxt). 
+#In this case, training_data.hdf5 includes 2000 training patches, iter_size=3, batch_size=3. Therefore, the stepsize should be set as 2000/(3*3)=222.
+
+#The learning rate policy: fixed makes the learning fixed, but you can use Adam optimizer if you use this lr policy
+#lr_policy: "fixed"
+
+power: 0.75
+
+display: 100
+# The maximum number of iterations
+max_iter: 5000000 #define it according to your dataset
+# snapshot intermediate results
+snapshot: 1000
+snapshot_prefix: "all"
+# solver mode: CPU or GPU
+#optimizer type: SGD by default. 
+#type:"Adam"
+solver_mode: GPU
