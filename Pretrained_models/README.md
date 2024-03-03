@@ -1,3 +1,5 @@
+## Deploy setting
+
 ***deploy.prototxt***: a deploy file used for testing stage, note that in the testing phase, you have to change "use_global_stats: false" to "use_global_stats: true". 
 
 ## Pretrained models:
