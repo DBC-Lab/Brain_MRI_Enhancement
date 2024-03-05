@@ -12,7 +12,9 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
    1. Download training samples (hdf5 data) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0. More information about hdf5 data is avaliable at <https://www.mathworks.com/help/matlab/hdf5-files.html>.
    2. Train a caffe model:
       
-    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
+    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &  # for local installtion of Caffe
+    
+    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &  # for Docker installtion of Caffe
 
    ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
@@ -38,7 +40,9 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
     
    2. Test:
       
-    python Reconstruction_T1_test.py    
+    python2 Reconstruction_test.py   # for local installtion of Caffe
+    
+    dpython Reconstruction_test_docker.py  # for Docker installtion of Caffe
     
 ## System requirements:
 
@@ -67,7 +71,19 @@ Then you can check the image using this command "docker images".
     alias dcaffe='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 /usr/local/caffe/caffe_rc3/build/tools/caffe'
     alias dpython='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 python'
 
-#### d. Please use the corresponding files to train models or test images. 
+Then, "source ~/.bashrc". 
+
+#### d. Test Caffe  
+
+    dcaffe
+
+The screen will show:  
+    
+<img src="https://github.com/YueSun814/Img-folder/blob/main/caffe_display.jpg" width="50%">    
+
+    dpython
+
+No output will be displayed. 
 
 ### 2. Local installation 
 
