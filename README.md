@@ -48,6 +48,8 @@ Caffe version 1.0.0-rc3
     
 ### Docker version
 
+!!! We included Caffe framework into a Docker image, please download the image from https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0
+
 ### Local installation 
 
 To make sure of consistency with our used version (e.g., including 3d convolution, and WeightedSoftmaxWithLoss, etc.), we strongly recommend installing _Caffe_ using our released ***caffe_rc3***. The installation steps are easy to perform without compilation procedure: 
