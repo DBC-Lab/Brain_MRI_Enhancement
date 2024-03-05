@@ -67,7 +67,7 @@ Then you can check the image using this command "docker images".
     alias dcaffe='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 /usr/local/caffe/caffe_rc3/build/tools/caffe'
     alias dpython='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 python'
 
-### d. Please use the corresponding files to train models or test images. 
+#### d. Please use the corresponding files to train models or test images. 
 
 ### 2. Local installation 
 
