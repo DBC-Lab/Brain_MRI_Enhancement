@@ -106,7 +106,9 @@ caffe_lib: <https://github.com/YueSun814/caffe_lib>
     export LD_LIBRARY_PATH=~/caffe_lib:$LD_LIBRARY_PATH
    
     export PYTHONPATH=~/caffe_rc3/python:$PATH
-    
+
+Then, "source ~/.bashrc".
+
 #### c. Test Caffe 
     
      cd caffe_rc3/build/tools
