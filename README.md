@@ -26,6 +26,10 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
 
    This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of "L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419."
 
+## PyTorch version
+
+   In folder ***PyTorch_version***, we implemented the same network architecture using PyTorch. You can find it in _Enhancement_model.py_. 
+
 ## Testing steps:
 
    In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
