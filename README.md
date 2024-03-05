@@ -45,12 +45,31 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
 Ubuntu 20.04.1
     
 Caffe version 1.0.0-rc3
+
+We provided two options for installing the Caffe framework on your local PC.  
     
-### Docker version
+### 1. Docker version
 
-!!! We included Caffe framework into a Docker image, please download the image from https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0
+!!! We have included the Caffe framework in a Docker image. 
 
-### Local installation 
+#### a. Download an image. 
+
+Please download the image from the following link: https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0. (The image is _caffe.tar_)
+
+#### b. Load the image into your local PC. 
+
+    docker load < caffe.tar 
+
+Then you can check the image using this command "docker images".  
+
+#### c. Add an alias to your _~/.bashrc_ file. to easily access Caffe from the Docker image. 
+
+    alias dcaffe='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 /usr/local/caffe/caffe_rc3/build/tools/caffe'
+    alias dpython='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 python'
+
+### d. Please use the corresponding files to train models or test images. 
+
+### 2. Local installation 
 
 To make sure of consistency with our used version (e.g., including 3d convolution, and WeightedSoftmaxWithLoss, etc.), we strongly recommend installing _Caffe_ using our released ***caffe_rc3***. The installation steps are easy to perform without compilation procedure: 
     
