@@ -4,7 +4,9 @@ Please download training datasets (*.hdf5) from https://www.dropbox.com/scl/fo/8
 
 ## To train a caffe model, please use this command: 
 
-    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 & 
+    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &   # for local installtion of Caffe
+    
+    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &   # for Docker installtion of Caffe
 
 ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
