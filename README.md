@@ -36,7 +36,7 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
    
    In folder ***Templates***: the corresponding eight images templates for histogram matching.
    
-   In folder ***Testing_subjects***: a testing sample at 24 months (test_img.???), and the corresponding reconstruction result (test_img-recon.nii.gz).
+   In folder ***Testing_subjects***: a testing sample at 24 months (_test_img.???_), and the corresponding reconstruction result (_test_img-recon.nii.gz_).
    
    Test an image: 
    
