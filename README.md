@@ -60,6 +60,8 @@ We provided two options for installing the Caffe framework on your local PC.
 
 !!! We have included the Caffe framework in a Docker image. 
 
+For Docker and Nvidia-docker installtion, please refer to https://github.com/iBEAT-V2/iBEAT-V2.0-Docker#run-the-pipeline. 
+
 #### a. Download an image. 
 
 Please download the image from the following link: https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0. (The image is _caffe.tar_)
