@@ -64,7 +64,7 @@ For Docker and Nvidia-docker installtion, please refer to https://github.com/iBE
 
 #### a. Download an image. 
 
-Please download the image from the following link: https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0. (The image is _caffe.tar_)
+Please download the image from the following link: [https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0](https://www.dropbox.com/scl/fi/ulx9a6ytdw2hpeoaahlxt/caffe.tar?rlkey=y6zwg5etyzhbtmw2l2i5rbjk2&dl=0). (The image is _caffe.tar_)
 
 #### b. Load the image into your local PC. 
 
