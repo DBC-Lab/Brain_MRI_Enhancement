@@ -1,12 +1,7 @@
 import torch
 from torch import nn
 
-from models.building_blocks.DenseBlock import DenseBlock
-from models.building_blocks.TransitionBlock import TransitionBlock
-from models.building_blocks.UpsamplingBlock import UpsamplingBlock
-
-
-class DenseUNet3d(nn.Module):
+class Enhancement_model(nn.Module):
     def __init__(self):
         """
         Create the layers for the model
@@ -343,7 +338,7 @@ class DenseUNet3d(nn.Module):
         self.bn32_recon = nn.BatchNorm3d(1)
         self.relu32_recon = nn.ReLU()
     def name(self):
-        return 'DUNet_Segmentation'
+        return 'Enhancement_model'
 
     def set_input(self, input):
         input_A = input['A']
