@@ -351,33 +351,33 @@ class Enhancement_model(nn.Module):
         :param x:  image tensor
         :return:   output of the forward pass
         """
-        conv1a = self.conv1(x)  # x: 9 1 32 32 32
+        conv1a = self.conv1(x) 
         conv1a_bn = self.bn1(conv1a)
         conv1a_bn = self.relu1(conv1a_bn)
 
-        convolution1 = self.conv2(conv1a_bn)  # 3 64 32 32 32
+        convolution1 = self.conv2(conv1a_bn) 
         batchnorm1 = self.bn2(convolution1)
         batchnorm1 = self.relu2(batchnorm1)
 
         convolution2 = self.conv3(batchnorm1)
         dropout1 = self.dropout3(convolution2)
         concat1 = torch.cat([convolution1, dropout1], dim=1)
-        batchnorm2 = self.bn3(concat1)  # 3 80 32 32 32
+        batchnorm2 = self.bn3(concat1) 
         batchnorm2 = self.relu3(batchnorm2)
 
         convolution3 = self.conv4(batchnorm2)
         dropout2 = self.dropout4(convolution3)
         concat2 = torch.cat([concat1, dropout2], dim=1)
-        batchnorm3 = self.bn4(concat2)  # 3 96 32 32 32
+        batchnorm3 = self.bn4(concat2)  
         batchnorm3 = self.relu4(batchnorm3)
 
         convolution4 = self.conv4_1(batchnorm3)
         dropout3 = self.dropout4_1(convolution4)
         concat3 = torch.cat([concat2, dropout3], dim=1)
-        conv1b_bn = self.bn4_1(concat3)  # 3 112 32 32 32
+        conv1b_bn = self.bn4_1(concat3) 
         conv1b_bn = self.relu4_1(conv1b_bn)
 
-        conv1c = self.conv5(conv1b_bn)  # 3 64 32 32 32
+        conv1c = self.conv5(conv1b_bn)  
         conv1c_bn = self.bn5(conv1c)
         conv1c_bn = self.relu5(conv1c_bn)
         pool1 = self.maxpool5(conv1c_bn)
@@ -386,7 +386,7 @@ class Enhancement_model(nn.Module):
         conv2a_BatchNorm1 = self.bn6(conv2a_Convolution1)
         conv2a_BatchNorm1 = self.relu6(conv2a_BatchNorm1)
 
-        conv2a_Convolution2 = self.conv7(conv2a_BatchNorm1)  # 3 32 16 16 16
+        conv2a_Convolution2 = self.conv7(conv2a_BatchNorm1)  
         conv2a_Dropout1 = self.dropout7(conv2a_Convolution2)
         conv2a_Concat1 = torch.cat([conv2a_Dropout1, conv2a_Convolution1], dim=1)
         conv2a_BatchNorm2 = self.bn7(conv2a_Concat1)
@@ -398,7 +398,7 @@ class Enhancement_model(nn.Module):
         conv2a_BatchNorm3 = self.bn8(conv2a_Concat2)
         conv2a_BatchNorm3 = self.relu8(conv2a_BatchNorm3)
 
-        conv2a_Convolution4 = self.conv9(conv2a_BatchNorm3)  # 3 32 16 16 16
+        conv2a_Convolution4 = self.conv9(conv2a_BatchNorm3) 
         conv2a_Dropout3 = self.dropout9(conv2a_Convolution4)
         conv2a = torch.cat([conv2a_Concat2, conv2a_Dropout3], dim=1)
         conv2a_bn = self.bn9(conv2a)
@@ -413,7 +413,7 @@ class Enhancement_model(nn.Module):
         conv3a_bn = self.bn11(conv3a)
         conv3a_bn = self.relu11(conv3a_bn)
         pool3 = self.maxpool11(conv3a_bn)
-        deconv4 = self.deconv11(pool3)  # 3 128 8 8 8
+        deconv4 = self.deconv11(pool3) 
         concat8 = torch.cat([conv3a, deconv4], dim=1)
 
         conv4_Convolution1 = self.conv12(concat8)
@@ -432,12 +432,12 @@ class Enhancement_model(nn.Module):
         conv4_BatchNorm3 = self.bn14(conv4_Concat2)
         conv4_BatchNorm3 = self.relu14(conv4_BatchNorm3)
 
-        conv4_Convolution4 = self.conv15(conv4_BatchNorm3)  # 3 32 8 8 8
+        conv4_Convolution4 = self.conv15(conv4_BatchNorm3) 
         conv4_Dropout3 = self.dropout15(conv4_Convolution4)
         conv4 = torch.cat([conv4_Concat2, conv4_Dropout3], dim=1)
         conv4_bn = self.bn15(conv4)
         conv4_bn = self.relu15(conv4_bn)
-        deconv5 = self.deconv15(conv4_bn)  # 3 128 16 16 16
+        deconv5 = self.deconv15(conv4_bn) 
         concat16 = torch.cat([conv2b, deconv5], dim=1)
 
         conv5_Convolution1 = self.conv16(concat16)
@@ -456,7 +456,7 @@ class Enhancement_model(nn.Module):
         conv5_Concat2 = self.bn18(conv5_Concat2)
         conv5_Concat2 = self.relu18(conv5_Concat2)
 
-        conv5_Convolution4 = self.conv19(conv5_Concat2)  # 3 32 16 16 16
+        conv5_Convolution4 = self.conv19(conv5_Concat2)  
         conv5_Dropout3 = self.dropout19(conv5_Convolution4)
         conv5 = torch.cat([conv5_Concat2, conv5_Dropout3], dim=1)
         conv5_bn = self.bn19(conv5)
@@ -473,7 +473,7 @@ class Enhancement_model(nn.Module):
         conv5_2_BatchNorm2 = self.relu21(conv5_2_BatchNorm2)
 
         conv5_2_Convolution3 = self.conv22(conv5_2_BatchNorm2)
-        conv5_2_Dropout2 = self.dropout22(conv5_2_Convolution3)  # 3 32 16 16 16
+        conv5_2_Dropout2 = self.dropout22(conv5_2_Convolution3)  
         conv5_2_Concat2 = torch.cat([conv5_2_Concat1, conv5_2_Dropout2], dim=1)
         conv5_2_BatchNorm3 = self.bn22(conv5_2_Concat2)
         conv5_2_BatchNorm3 = self.relu22(conv5_2_BatchNorm3)
@@ -490,7 +490,7 @@ class Enhancement_model(nn.Module):
         conv6_BatchNorm1 = self.bn24(conv6_Convolution1)
         conv6_BatchNorm1 = self.relu24(conv6_BatchNorm1)
 
-        conv6_Convolution2 = self.conv25(conv6_BatchNorm1)  # 3 16 32 32 32
+        conv6_Convolution2 = self.conv25(conv6_BatchNorm1) 
         conv6_Dropout1 = self.dropout25(conv6_Convolution2)
         conv6_Concat1 = torch.cat([conv6_Convolution1, conv6_Dropout1], dim=1)
         conv6_BatchNorm2 = self.bn25(conv6_Concat1)
@@ -508,17 +508,17 @@ class Enhancement_model(nn.Module):
         conv6_bn = self.bn27(conv6)
         conv6_bn = self.relu27(conv6_bn)
 
-        conv6_2_Convolution1 = self.conv28(conv6_bn)  # 3 16 32 32 32
+        conv6_2_Convolution1 = self.conv28(conv6_bn) 
         conv6_2_BatchNorm1 = self.bn28(conv6_2_Convolution1)
         conv6_2_BatchNorm1 = self.relu28(conv6_2_BatchNorm1)
 
         conv6_2_Convolution2 = self.conv29(conv6_2_BatchNorm1)
         conv6_2_Dropout1 = self.dropout29(conv6_2_Convolution2)
-        conv6_2_Concat1 = torch.cat([conv6_2_Convolution1, conv6_2_Dropout1], dim=1) # 3 80 32 32
+        conv6_2_Concat1 = torch.cat([conv6_2_Convolution1, conv6_2_Dropout1], dim=1) 
         conv6_2_BatchNorm2 = self.bn29(conv6_2_Concat1)
         conv6_2_BatchNorm2 = self.relu29(conv6_2_BatchNorm2)
 
-        conv6_2_Convolution3 = self.conv30(conv6_2_BatchNorm2)  # 3 16 32 32 32
+        conv6_2_Convolution3 = self.conv30(conv6_2_BatchNorm2)
         conv6_2_Dropout2 = self.dropout30(conv6_2_Convolution3)
         conv6_2_Concat2 = torch.cat([conv6_2_Concat1, conv6_2_Dropout2], dim=1)
         conv6_2_BatchNorm3 = self.bn30(conv6_2_Concat2)
@@ -545,33 +545,33 @@ class Enhancement_model(nn.Module):
         concat1_recon = torch.cat([output_bn_con, volMR_bn_con], dim=1)
 
         # Reconstruction model
-        conv1a_recon = self.conv1_recon(concat1_recon)  # x: 9 1 32 32 32
+        conv1a_recon = self.conv1_recon(concat1_recon)  
         conv1a_bn_recon = self.bn1_recon(conv1a_recon)
         conv1a_bn_recon = self.relu1_recon(conv1a_bn_recon)
 
-        convolution1_recon = self.conv2_recon(conv1a_bn_recon)  # 3 64 32 32 32
+        convolution1_recon = self.conv2_recon(conv1a_bn_recon)
         batchnorm1_recon = self.bn2_recon(convolution1_recon)
         batchnorm1_recon = self.relu2_recon(batchnorm1_recon)
 
         convolution2_recon = self.conv3_recon(batchnorm1_recon)
         dropout1_recon = self.dropout3_recon(convolution2_recon)
         concat1_recon = torch.cat([convolution1_recon, dropout1_recon], dim=1)
-        batchnorm2_recon = self.bn3_recon(concat1_recon)  # 3 80 32 32 32
+        batchnorm2_recon = self.bn3_recon(concat1_recon) 
         batchnorm2_recon = self.relu3_recon(batchnorm2_recon)
 
         convolution3_recon = self.conv4_recon(batchnorm2_recon)
         dropout2_recon = self.dropout4_recon(convolution3_recon)
         concat2_recon = torch.cat([concat1_recon, dropout2_recon], dim=1)
-        batchnorm3_recon = self.bn4_recon(concat2_recon)  # 3 96 32 32 32
+        batchnorm3_recon = self.bn4_recon(concat2_recon) 
         batchnorm3_recon = self.relu4_recon(batchnorm3_recon)
 
         convolution4_recon = self.conv4_1_recon(batchnorm3_recon)
         dropout3_recon = self.dropout4_1_recon(convolution4_recon)
         concat3_recon = torch.cat([concat2_recon, dropout3_recon], dim=1)
-        conv1b_bn_recon = self.bn4_1_recon(concat3_recon)  # 3 112 32 32 32
+        conv1b_bn_recon = self.bn4_1_recon(concat3_recon) 
         conv1b_bn_recon = self.relu4_1_recon(conv1b_bn_recon)
 
-        conv1c_recon = self.conv5_recon(conv1b_bn_recon)  # 3 64 32 32 32
+        conv1c_recon = self.conv5_recon(conv1b_bn_recon) 
         conv1c_bn_recon = self.bn5_recon(conv1c_recon)
         conv1c_bn_recon = self.relu5_recon(conv1c_bn_recon)
         pool1_recon = self.maxpool5_recon(conv1c_bn_recon)
@@ -580,7 +580,7 @@ class Enhancement_model(nn.Module):
         conv2a_BatchNorm1_recon = self.bn6_recon(conv2a_Convolution1_recon)
         conv2a_BatchNorm1_recon = self.relu6_recon(conv2a_BatchNorm1_recon)
 
-        conv2a_Convolution2_recon = self.conv7_recon(conv2a_BatchNorm1_recon)  # 3 32 16 16 16
+        conv2a_Convolution2_recon = self.conv7_recon(conv2a_BatchNorm1_recon) 
         conv2a_Dropout1_recon = self.dropout7_recon(conv2a_Convolution2_recon)
         conv2a_Concat1_recon = torch.cat([conv2a_Dropout1_recon, conv2a_Convolution1_recon], dim=1)
         conv2a_BatchNorm2_recon = self.bn7_recon(conv2a_Concat1_recon)
@@ -592,7 +592,7 @@ class Enhancement_model(nn.Module):
         conv2a_BatchNorm3_recon = self.bn8_recon(conv2a_Concat2_recon)
         conv2a_BatchNorm3_recon = self.relu8_recon(conv2a_BatchNorm3_recon)
 
-        conv2a_Convolution4_recon = self.conv9_recon(conv2a_BatchNorm3_recon)  # 3 32 16 16 16
+        conv2a_Convolution4_recon = self.conv9_recon(conv2a_BatchNorm3_recon)  
         conv2a_Dropout3_recon = self.dropout9_recon(conv2a_Convolution4_recon)
         conv2a_recon = torch.cat([conv2a_Concat2_recon, conv2a_Dropout3_recon], dim=1)
         conv2a_bn_recon = self.bn9_recon(conv2a_recon)
@@ -607,7 +607,7 @@ class Enhancement_model(nn.Module):
         conv3a_bn_recon = self.bn11_recon(conv3a_recon)
         conv3a_bn_recon = self.relu11_recon(conv3a_bn_recon)
         pool3_recon = self.maxpool11_recon(conv3a_bn_recon)
-        deconv4_recon = self.deconv11_recon(pool3_recon)  # 3 128 8 8 8
+        deconv4_recon = self.deconv11_recon(pool3_recon) 
         concat8_recon = torch.cat([conv3a_recon, deconv4_recon], dim=1)
 
         conv4_Convolution1_recon = self.conv12_recon(concat8_recon)
@@ -626,12 +626,12 @@ class Enhancement_model(nn.Module):
         conv4_BatchNorm3_recon = self.bn14_recon(conv4_Concat2_recon)
         conv4_BatchNorm3_recon = self.relu14_recon(conv4_BatchNorm3_recon)
 
-        conv4_Convolution4_recon = self.conv15_recon(conv4_BatchNorm3_recon)  # 3 32 8 8 8
+        conv4_Convolution4_recon = self.conv15_recon(conv4_BatchNorm3_recon)  
         conv4_Dropout3_recon = self.dropout15_recon(conv4_Convolution4_recon)
         conv4_recon = torch.cat([conv4_Concat2_recon, conv4_Dropout3_recon], dim=1)
         conv4_bn_recon = self.bn15_recon(conv4_recon)
         conv4_bn_recon = self.relu15_recon(conv4_bn_recon)
-        deconv5_recon = self.deconv15_recon(conv4_bn_recon)  # 3 128 16 16 16
+        deconv5_recon = self.deconv15_recon(conv4_bn_recon)  
         concat16_recon = torch.cat([conv2b_recon, deconv5_recon], dim=1)
 
         conv5_Convolution1_recon = self.conv16_recon(concat16_recon)
@@ -650,7 +650,7 @@ class Enhancement_model(nn.Module):
         conv5_Concat2_recon = self.bn18_recon(conv5_Concat2_recon)
         conv5_Concat2_recon = self.relu18_recon(conv5_Concat2_recon)
 
-        conv5_Convolution4_recon = self.conv19_recon(conv5_Concat2_recon)  # 3 32 16 16 16
+        conv5_Convolution4_recon = self.conv19_recon(conv5_Concat2_recon) 
         conv5_Dropout3_recon = self.dropout19_recon(conv5_Convolution4_recon)
         conv5_recon = torch.cat([conv5_Concat2_recon, conv5_Dropout3_recon], dim=1)
         conv5_bn_recon = self.bn19_recon(conv5_recon)
@@ -667,7 +667,7 @@ class Enhancement_model(nn.Module):
         conv5_2_BatchNorm2_recon = self.relu21_recon(conv5_2_BatchNorm2_recon)
 
         conv5_2_Convolution3_recon = self.conv22_recon(conv5_2_BatchNorm2_recon)
-        conv5_2_Dropout2_recon = self.dropout22_recon(conv5_2_Convolution3_recon)  # 3 32 16 16 16
+        conv5_2_Dropout2_recon = self.dropout22_recon(conv5_2_Convolution3_recon) 
         conv5_2_Concat2_recon = torch.cat([conv5_2_Concat1_recon, conv5_2_Dropout2_recon], dim=1)
         conv5_2_BatchNorm3_recon = self.bn22_recon(conv5_2_Concat2_recon)
         conv5_2_BatchNorm3_recon = self.relu22_recon(conv5_2_BatchNorm3_recon)
@@ -684,7 +684,7 @@ class Enhancement_model(nn.Module):
         conv6_BatchNorm1_recon = self.bn24_recon(conv6_Convolution1_recon)
         conv6_BatchNorm1_recon = self.relu24_recon(conv6_BatchNorm1_recon)
 
-        conv6_Convolution2_recon = self.conv25_recon(conv6_BatchNorm1_recon)  # 3 16 32 32 32
+        conv6_Convolution2_recon = self.conv25_recon(conv6_BatchNorm1_recon)  
         conv6_Dropout1_recon = self.dropout25_recon(conv6_Convolution2_recon)
         conv6_Concat1_recon = torch.cat([conv6_Convolution1_recon, conv6_Dropout1_recon], dim=1)
         conv6_BatchNorm2_recon = self.bn25_recon(conv6_Concat1_recon)
@@ -702,17 +702,17 @@ class Enhancement_model(nn.Module):
         conv6_bn_recon = self.bn27_recon(conv6_recon)
         conv6_bn_recon = self.relu27_recon(conv6_bn_recon)
 
-        conv6_2_Convolution1_recon = self.conv28_recon(conv6_bn_recon)  # 3 16 32 32 32
+        conv6_2_Convolution1_recon = self.conv28_recon(conv6_bn_recon) 
         conv6_2_BatchNorm1_recon = self.bn28_recon(conv6_2_Convolution1_recon)
         conv6_2_BatchNorm1_recon = self.relu28_recon(conv6_2_BatchNorm1_recon)
 
         conv6_2_Convolution2_recon = self.conv29_recon(conv6_2_BatchNorm1_recon)
         conv6_2_Dropout1_recon = self.dropout29_recon(conv6_2_Convolution2_recon)
-        conv6_2_Concat1_recon = torch.cat([conv6_2_Convolution1_recon, conv6_2_Dropout1_recon], dim=1)  # 3 80 32 32
+        conv6_2_Concat1_recon = torch.cat([conv6_2_Convolution1_recon, conv6_2_Dropout1_recon], dim=1) 
         conv6_2_BatchNorm2_recon = self.bn29_recon(conv6_2_Concat1_recon)
         conv6_2_BatchNorm2_recon = self.relu29_recon(conv6_2_BatchNorm2_recon)
 
-        conv6_2_Convolution3_recon = self.conv30_recon(conv6_2_BatchNorm2_recon)  # 3 16 32 32 32
+        conv6_2_Convolution3_recon = self.conv30_recon(conv6_2_BatchNorm2_recon)  
         conv6_2_Dropout2_recon = self.dropout30_recon(conv6_2_Convolution3_recon)
         conv6_2_Concat2_recon = torch.cat([conv6_2_Concat1_recon, conv6_2_Dropout2_recon], dim=1)
         conv6_2_BatchNorm3_recon = self.bn30_recon(conv6_2_Concat2_recon)
