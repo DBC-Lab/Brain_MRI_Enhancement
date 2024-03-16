@@ -27,10 +27,10 @@ print("blobs {}\nparams {}".format(mynet.blobs.keys(), mynet.params.keys()))
 d1=40
 d2=40
 d3=40
-dFA=[d1,d2,d3]  #patch size: 40*40*40
-dSeg=[40,40,40]  #equal or smaller than patch size, to avoid margin issue when testing 
+dPatchT1=[d1,d2,d3]  #patch size: 40*40*40
+dPatchT1_ROI=[40,40,40]  #equal or smaller than patch size, to avoid margin issue when testing 
 
-#step size, usually set as [8, 16]
+#step size, usually set as [8, 16]: small step size results in good results but at the cost of long running time.
 step1=12
 step2=12
 step3=12
@@ -38,77 +38,63 @@ step3=12
 step=[step1,step2,step3]
 NumOfClass=4 #the number of classes in this segmentation project, e.g., WM, GM, CSF and background in this case
     
-def cropCubic(matFA,fileID,d,step,rate):
+def cropCubic(matT1,fileID,d,step,rate):
     eps=1e-5
     #transpose
-    matFA=np.transpose(matFA,(0,2,1))
+    matT1=np.transpose(matT1,(0,2,1))
 
-    [row,col,leng]=matFA.shape
-    margin1=(dFA[0]-dSeg[0])/2
-    margin2=(dFA[1]-dSeg[1])/2
-    margin3=(dFA[2]-dSeg[2])/2
+    [row,col,leng]=matT1.shape
+    margin1=(dPatchT1[0]-dPatchT1_ROI[0])/2
+    margin2=(dPatchT1[1]-dPatchT1_ROI[1])/2
+    margin3=(dPatchT1[2]-dPatchT1_ROI[2])/2
     cubicCnt=0
     marginD=[margin1,margin2,margin3]
     
-    print 'matFA shape is ',matFA.shape
-    matFAOut=np.zeros([row+2*marginD[0],col+2*marginD[1],leng+2*marginD[2]])
-    print 'matFAOut shape is ',matFAOut.shape
-    matFAOut[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matFA
+    print 'matT1 shape is ',matT1.shape
+    matT1Out=np.zeros([row+2*marginD[0],col+2*marginD[1],leng+2*marginD[2]])
+    print 'matT1Out shape is ',matT1Out.shape
+    matT1Out[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matT1
 
 
     if margin1!=0:
-        matFAOut[0:marginD[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matFA[marginD[0]-1::-1,:,:] #reverse 0:marginD[0]
-        matFAOut[row+marginD[0]:matFAOut.shape[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matFA[matFA.shape[0]-1:row-marginD[0]-1:-1,:,:] #we'd better flip it along the 1st dimension
+        matT1Out[0:marginD[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matT1[marginD[0]-1::-1,:,:] #reverse 0:marginD[0]
+        matT1Out[row+marginD[0]:matT1Out.shape[0],marginD[1]:col+marginD[1],marginD[2]:leng+marginD[2]]=matT1[matT1.shape[0]-1:row-marginD[0]-1:-1,:,:] #we'd better flip it along the 1st dimension
     if margin2!=0:
-        matFAOut[marginD[0]:row+marginD[0],0:marginD[1],marginD[2]:leng+marginD[2]]=matFA[:,marginD[1]-1::-1,:] #we'd flip it along the 2nd dimension
-        matFAOut[marginD[0]:row+marginD[0],col+marginD[1]:matFAOut.shape[1],marginD[2]:leng+marginD[2]]=matFA[:,matFA.shape[1]-1:col-marginD[1]-1:-1,:] #we'd flip it along the 2nd dimension
+        matT1Out[marginD[0]:row+marginD[0],0:marginD[1],marginD[2]:leng+marginD[2]]=matT1[:,marginD[1]-1::-1,:] #we'd flip it along the 2nd dimension
+        matT1Out[marginD[0]:row+marginD[0],col+marginD[1]:matT1Out.shape[1],marginD[2]:leng+marginD[2]]=matT1[:,matT1.shape[1]-1:col-marginD[1]-1:-1,:] #we'd flip it along the 2nd dimension
     if margin3!=0:
-        matFAOut[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],0:marginD[2]]=matFA[:,:,marginD[2]-1::-1] #we'd better flip it along the 3rd dimension
-        matFAOut[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],marginD[2]+leng:matFAOut.shape[2]]=matFA[:,:,matFA.shape[2]-1:leng-marginD[2]-1:-1]
+        matT1Out[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],0:marginD[2]]=matT1[:,:,marginD[2]-1::-1] #we'd better flip it along the 3rd dimension
+        matT1Out[marginD[0]:row+marginD[0],marginD[1]:col+marginD[1],marginD[2]+leng:matT1Out.shape[2]]=matT1[:,:,matT1.shape[2]-1:leng-marginD[2]-1:-1]
   
-    matFAOutScale = nd.interpolation.zoom(matFAOut, zoom=rate)
+    matT1OutScale = nd.interpolation.zoom(matT1Out, zoom=rate)
 
-    matOut=np.zeros((matFA.shape[0],matFA.shape[1],matFA.shape[2],NumOfClass))
-    heatmap=np.zeros((matFA.shape[0],matFA.shape[1],matFA.shape[2]))
+    matOut=np.zeros((matT1.shape[0],matT1.shape[1],matT1.shape[2],NumOfClass))
+    Recon=np.zeros((matT1.shape[0],matT1.shape[1],matT1.shape[2]))
   
-    Visit=np.zeros((matFA.shape[0],matFA.shape[1],matFA.shape[2]))+eps
-    [row,col,leng]=matFA.shape
+    Visit=np.zeros((matT1.shape[0],matT1.shape[1],matT1.shape[2]))+eps
+    [row,col,leng]=matT1.shape
         
     for i in range(d[0]/2+marginD[0]+1,row-d[0]/2-marginD[0]-2,step[0]):
         for j in range(d[1]/2+marginD[1]+1,col-d[1]/2-marginD[1]-2,step[1]):
             for k in range(d[2]/2+marginD[2]+1,leng-d[2]/2-marginD[2]-2,step[2]):
-                volFA=matFA[i-d[0]/2-marginD[0]:i+d[0]/2+marginD[0],j-d[1]/2-marginD[1]:j+d[1]/2+marginD[1],k-d[2]/2-marginD[2]:k+d[2]/2+marginD[2] ]
+                volPatchT1=matT1[i-d[0]/2-marginD[0]:i+d[0]/2+marginD[0],j-d[1]/2-marginD[1]:j+d[1]/2+marginD[1],k-d[2]/2-marginD[2]:k+d[2]/2+marginD[2] ]
                 
-                if np.sum(volFA)>10 :
+                if np.sum(volPatchT1)>10 :
 
-                    volFA=np.float64(volFA)
+                    volPatchT1=np.float64(volPatchT1)
 
-                    #print 'volFA shape is ',volFA.shape
-                    mynet.blobs['dataT1'].data[0,0,...]=volFA
+                    #print 'volPatchT1 shape is ',volPatchT1.shape
+                    mynet.blobs['dataT1'].data[0,0,...]=volPatchT1
 
                     mynet.forward()
                     temppremat = mynet.blobs['conv6_3-BatchNorm1'].data #Note you have add softmax layer in deploy prototxt
                     Visit[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]=Visit[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]+1
-                    heatmap[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]=heatmap[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]+temppremat[0,0,marginD[0]:marginD[0]+d[0],marginD[1]:marginD[1]+d[1],marginD[2]:marginD[2]+d[2]]
+                    Recon[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]=Recon[i-d[0]/2:i+d[0]/2,j-d[1]/2:j+d[1]/2,k-d[2]/2:k+d[2]/2]+temppremat[0,0,marginD[0]:marginD[0]+d[0],marginD[1]:marginD[1]+d[1],marginD[2]:marginD[2]+d[2]]
 
-    heatmap = heatmap/Visit
-    heatmap=np.transpose(heatmap,(0,2,1))
+    Recon = Recon/Visit
+    Recon=np.transpose(Recon,(0,2,1))
     
-    return heatmap
- 
-#this function is used to compute the dice ratio
-def dice(im1, im2,tid):
-    im1=im1==tid #make it boolean
-    im2=im2==tid #make it boolean
-    im1=np.asarray(im1).astype(np.bool)
-    im2=np.asarray(im2).astype(np.bool)
-
-    if im1.shape != im2.shape:
-        raise ValueError("Shape mismatch: im1 and im2 must have the same shape.")
-    # Compute Dice coefficient
-    intersection = np.logical_and(im1, im2)
-    dsc=2. * intersection.sum() / (im1.sum() + im2.sum())
-    return dsc
+    return Recon
 
 def main():
     datapath='Testing_subjects/' #the path to your test images
@@ -123,9 +109,9 @@ def main():
         mrimgT1=sitk.GetArrayFromImage(imgOrg)
 
         rate=1
-        heatmap = cropCubic(mrimgT1,fileID,dSeg,step,rate)
+        Recon = cropCubic(mrimgT1,fileID,dPatchT1_ROI,step,rate)
         
-        volOut=sitk.GetImageFromArray(heatmap)
+        volOut=sitk.GetImageFromArray(Recon)
 	volOut.SetSpacing([0.8,0.8,0.8])
         sitk.WriteImage(volOut,'./{}/{}-recon.nii.gz'.format(datapath, myid))   
 
