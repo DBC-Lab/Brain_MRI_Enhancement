@@ -39,9 +39,18 @@ This manuscript describes a novel tissue-aware reconstruction framework that can
    
    Test an image: 
    
-   1. Performing histogram matching for testing images with provided templates (in folder ***Templates***). 
+   1. Performing histogram matching for testing images with provided templates (in folder ***Templates***).
+
+    def hist_match(img, temp):
+    ''' histogram matching from img to temp '''
+    matcher = sitk.HistogramMatchingImageFilter()
+    matcher.SetNumberOfHistogramLevels(1024)
+    matcher.SetNumberOfMatchPoints(7)
+    matcher.ThresholdAtMeanIntensityOn()
+    res = matcher.Execute(img, temp)
+    return res
     
-   2. Test:
+   3. Test:
       
     python2 Reconstruction_test.py   # for local installation of Caffe
     
