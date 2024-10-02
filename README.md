@@ -1,9 +1,9 @@
-# Lifespan Brain MRI Enhancement for Motion Removal, Super Resolution, Denoising and More
+# A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks
 
 ### Structural magnetic resonance (MR) imaging is a vital tool for neuroimaging analyses, but the quality of MR images is often degraded by various factors, such as motion artifacts, large slice thickness, and imaging noise. These factors can cause confounding effects and pose significant challenges, especially in young children who tend to move during acquisition.
 
 ## Method
-This manuscript describes a novel tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
+This manuscript describes a tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
 
 ## Training steps:
 
