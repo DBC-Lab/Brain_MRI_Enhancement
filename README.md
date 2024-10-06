@@ -1,4 +1,4 @@
-# A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks
+# BME-X: Brain MRI enhancement foundation model for motion correction, denoising, super-resolution, harmonization, and downstream tasks
 
 ### Structural magnetic resonance (MR) imaging is a vital tool for neuroimaging analyses, but the quality of MR images is often degraded by various factors, such as motion artifacts, large slice thickness, and imaging noise. These factors can cause confounding effects and pose significant challenges, especially in young children who tend to move during acquisition.
 
