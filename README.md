@@ -26,6 +26,11 @@ Enhanced results of the BME-X model for 10,963 in vivo low-quality images across
 ### Application on harmonization across scanners:
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_harmonization.png" width="100%"> 
+</div>  
+
+### Enhancements with auxiliary labels:
+<div align="center">
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_spots.png" width="30%"> 
 </div>   
 
 ## Training steps:
