@@ -6,6 +6,9 @@
 This manuscript describes a tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_flowchart.png" width="100%">    
 
+### Motion correction and super resolution
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_BCP_real_images.png" width="70%"> 
+
 ## Training steps:
 
    In folder: ***Training_files***
