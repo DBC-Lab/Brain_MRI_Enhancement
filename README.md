@@ -20,7 +20,7 @@ Enhanced results of the BME-X model for 10,963 in vivo low-quality images across
 
 ### Application on reconstruction 7T-like images from 3T MRIs:
 <div align="center">
-<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_3T_7T.png" width="90%"> 
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_3T_7T.png" width="60%"> 
 </div>   
 
 ### Application on harmonization across scanners:
@@ -28,7 +28,7 @@ Enhanced results of the BME-X model for 10,963 in vivo low-quality images across
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_harmonization.png" width="100%"> 
 </div>  
 
-### Enhancements with auxiliary labels:
+### Preservation of small lesions during enhancement:
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_spots.png" width="50%"> 
 </div>  
