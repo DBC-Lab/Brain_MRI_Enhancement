@@ -23,7 +23,7 @@ Enhanced results of the BME-X model for 10,963 in vivo low-quality images across
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_3T_7T.png" width="60%"> 
 </div>   
 
-### Application on harmonization across scanners:
+### Application on harmonization across scanners (into a latent common space):
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_harmonization.png" width="100%"> 
 </div>  
