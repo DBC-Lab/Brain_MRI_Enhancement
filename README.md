@@ -33,7 +33,7 @@ Enhanced results of the BME-X model for 10,963 in vivo low-quality images across
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_spots.png" width="30%"> 
 </div>  
 
-### Enhancements with auxiliary labels:
+### Bias quantification during reconstruction:
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_MR-ART.png" width="100%"> 
 </div>  
