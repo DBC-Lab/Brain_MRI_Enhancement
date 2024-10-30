@@ -66,7 +66,7 @@ Effect size (Cohen’s _d_) of tissue volumes between Alzheimer’s disease and 
 
    ***train.prototxt***: network architecture.
 
-   This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of "L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419."
+   This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of _L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419._
 
 ## PyTorch version
 
