@@ -9,7 +9,10 @@ Current Version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/z
 ## Papers
 Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
 
-## Method
+## Intended Usage
+BME-X is designed for researchers and clinicians working with structural MRIs to enhance image quality and perform standardized analyses.
+
+### Method
 In structural magnetic resonance (MR) imaging, motion artifacts, low resolution, imaging noise, and variability in acquisition protocols, frequently degrade image quality and confound downstream analyses. Here we report a flexible and easy-to-implement Brain MRI Enhancement foundation (BME-X) model for the motion correction, resolution enhancement, denoising and harmonization of MR images. Our framework also exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_flowchart.png" width="100%">    
 
