@@ -1,7 +1,7 @@
 # BME-X: A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14047881.svg)](https://doi.org/10.5281/zenodo.14047881)
 
-_Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press_
+**Papers**. Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
