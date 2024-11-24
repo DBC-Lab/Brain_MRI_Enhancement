@@ -141,9 +141,9 @@ Please download the image from the following link: [https://www.dropbox.com/scl/
 #### b. Load the image into your local PC. 
 
 To load the Docker image, use the following command:
+
     docker load < caffe.tar 
     
-
 You can verify that the image was loaded successfully by running:
 
     docker images
@@ -156,11 +156,13 @@ To easily access Caffe from the Docker image, add the following aliases to your 
     alias dpython='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 python'
 
 Then, refresh your shell by running:
+
     source ~/.bashrc
 
 #### d. Test Caffe  
 
 To test if Caffe is working properly, run:
+
     dcaffe
 
 The screen will show:  
