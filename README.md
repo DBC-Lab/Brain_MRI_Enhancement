@@ -119,7 +119,7 @@ Please select the corresponding models and reference files based on your require
    -  Path to the test images: "datapath='Testing_subjects/'"
    -  Reference file for histogram matching: "reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr')"
     
-## System requirements:
+## System requirements
 
 Ubuntu 20.04.1
     
