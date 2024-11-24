@@ -1,3 +1,5 @@
+## Training Steps
+
    1. Download an example training dataset (in HDF5 format) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0. More information about HDF5 format is avaliable at <https://www.mathworks.com/help/matlab/hdf5-files.html>.
    2. Train a caffe model:
 
