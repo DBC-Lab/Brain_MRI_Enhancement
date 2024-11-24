@@ -68,15 +68,22 @@ Effect size (Cohen’s _d_) of tissue volumes between Alzheimer’s disease and 
     # For a Docker-based installation of Caffe
     dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 & 
 
-   ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
+- ***solver.prototxt***: This file defines the training configurations for your model, including:
 
-   ***-gpu***: set GPU number.
+  - The base learning rate (base_lr: 0.005).
+  - The network definition file (net: "train.prototxt").
+  - The step size for learning rate adjustments (stepsize: 222). Adjust this parameter based on the number of training samples..
+  - The saving path for model snapshots (snapshot_prefix: "./").
+  - Other training-related parameters.
 
-   ***train.log***: a log file to record the model training stage.
+- ***-gpu***: Specifies the GPU ID to use for training.
 
-   ***train.prototxt***: network architecture.
+- ***train.log***: A log file that records details of the model's training process.
 
-   This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of _L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419._
+- ***train.prototxt***: Defines the network architecture.
+
+The network architecture is based on the **Anatomy-Guided Densely-Connected U-Net (ADU-Net)**, as described in the paper:
+L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," MICCAI, 2018, pp. 411-419.
 
 ### PyTorch model
 
