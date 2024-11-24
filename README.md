@@ -90,19 +90,13 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
    In the folder ***PyTorch_version***, we implemented the same network architecture using PyTorch. The implementation can be found in _Enhancement_model_.py.
 
 ## Testing Steps
-
-   In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
-   
-   In folder ***Templates***: the corresponding eight images templates for histogram matching.
-   
-   In folder ***Testing_subjects***: a testing sample at 24 months (_test_img.???_), and the corresponding reconstruction result (_test_img-recon.nii.gz_).
    
 ### Folder descriptions
    ***Pretrained_models***: Contains eight pretrained models used for testing images at different ages.
    
    ***Templates***: Includes eight corresponding image templates for histogram matching.
    
-   ***Testing_subjects***: A testing sample at 24 months (test_img.???). The corresponding reconstruction result (test_img-recon.nii.gz).
+   ***Testing_subjects***: A testing sample at 24 months (_test_img.???_). The corresponding reconstruction result (_test_img-recon.nii.gz_).
 
 ### How to test
    
