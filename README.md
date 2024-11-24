@@ -106,7 +106,7 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
 
 ### How to test
    
-   1. Performing histogram matching for testing images with provided templates (in folder ***Templates***).
+   1. Perform histogram matching for testing images using the provided templates (located in the folder ***Templates***):
 
     def hist_match(img, temp):
     ''' histogram matching from img to temp '''
@@ -117,11 +117,13 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
     res = matcher.Execute(img, temp)
     return res
     
-   3. Test:
+   2. Run the test:
       
-    python2 Reconstruction_test.py   # for local installation of Caffe
-    
-    dpython Reconstruction_test_docker.py  # for Docker installation of Caffe
+    # For a local installation of Caffe:
+    python2 Reconstruction_test.py   
+
+    # For a Docker-based installation of Caffe:
+    dpython Reconstruction_test_docker.py 
     
 ## System requirements:
 
