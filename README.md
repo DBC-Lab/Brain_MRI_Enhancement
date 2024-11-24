@@ -4,7 +4,7 @@
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
 ## Version
-Current Version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/zenodo.14047881))
+Current version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/zenodo.14047881))
 
 ## Papers
 Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
@@ -56,15 +56,17 @@ Effect size (Cohen’s _d_) of tissue volumes between Alzheimer’s disease and 
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_ADNI.jpg" width="80%"> 
 </div>  
 
-## Training steps:
+## Training Steps
 
    In folder: ***Training_files***
    1. Download an example training dataset (in HDF5 format) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0. More information about HDF5 format is avaliable at <https://www.mathworks.com/help/matlab/hdf5-files.html>.
    2. Train a caffe model:
-      
-    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &  # for local installation of Caffe
+
+    # For a local installation of Caffe
+    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
     
-    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &  # for Docker installation of Caffe
+    # For a Docker-based installation of Caffe
+    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 & 
 
    ***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
 
@@ -76,11 +78,11 @@ Effect size (Cohen’s _d_) of tissue volumes between Alzheimer’s disease and 
 
    This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of _L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419._
 
-## PyTorch version
+### PyTorch model
 
    In folder ***PyTorch_version***, we implemented the same network architecture using PyTorch. You can find it in _Enhancement_model.py_. 
 
-## Testing steps:
+## Testing Steps
 
    In folder ***Pretrained_models***: eight pretrained models used for testing images at different ages.
    
