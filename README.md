@@ -131,33 +131,42 @@ Ubuntu 20.04.1
     
 Caffe version 1.0.0-rc3
 
-We provided two options for installing the Caffe framework on your local PC.  
+We provide two options for installing the Caffe framework on your local PC.  
     
-### 1. Docker version
+### 1. Docker-based installation of Caffe
 
-!!! We have included the Caffe framework in a Docker image. 
+Note: The Caffe framework is included in a Docker image for your convenience.
 
-For Docker and Nvidia-docker installation, please refer to https://github.com/iBEAT-V2/iBEAT-V2.0-Docker#run-the-pipeline. 
+For instructions on Docker and Nvidia-Docker installation, please visit:
+https://github.com/iBEAT-V2/iBEAT-V2.0-Docker#run-the-pipeline
 
-#### a. Download an image. 
+#### a. Download the image
 
 Please download the image from the following link: [https://www.dropbox.com/scl/fi/jgszaaldp97fktmi833je/caffe.tar?rlkey=snaxky2fz9ljn8a8mt0jz7d5q&dl=0](https://www.dropbox.com/scl/fi/ulx9a6ytdw2hpeoaahlxt/caffe.tar?rlkey=y6zwg5etyzhbtmw2l2i5rbjk2&dl=0). (The image is _caffe.tar_)
 
 #### b. Load the image into your local PC. 
 
+To load the Docker image, use the following command:
     docker load < caffe.tar 
+    
 
-Then you can check the image using this command "docker images".  
+You can verify that the image was loaded successfully by running:
 
-#### c. Add an alias to your _~/.bashrc_ file. to easily access Caffe from the Docker image. 
+    docker images
+
+#### c. Add an alias to your _~/.bashrc_ file. 
+
+To easily access Caffe from the Docker image, add the following aliases to your ~/.bashrc file: 
 
     alias dcaffe='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 /usr/local/caffe/caffe_rc3/build/tools/caffe'
     alias dpython='nvidia-docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) caffe:v2 python'
 
-Then, "source ~/.bashrc". 
+Then, refresh your shell by running:
+    source ~/.bashrc
 
 #### d. Test Caffe  
 
+To test if Caffe is working properly, run:
     dcaffe
 
 The screen will show:  
