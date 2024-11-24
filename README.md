@@ -1,9 +1,13 @@
 # BME-X: A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14047881.svg)](https://doi.org/10.5281/zenodo.14047881)
 
-**Papers**. Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
-
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
+
+## Version
+Current Version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/zenodo.14047881))
+
+## Papers
+Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
 
 ## Method
 In structural magnetic resonance (MR) imaging, motion artifacts, low resolution, imaging noise, and variability in acquisition protocols, frequently degrade image quality and confound downstream analyses. Here we report a flexible and easy-to-implement Brain MRI Enhancement foundation (BME-X) model for the motion correction, resolution enhancement, denoising and harmonization of MR images. Our framework also exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
