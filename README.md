@@ -101,15 +101,6 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
 ### How to test
    
    1. Perform histogram matching for testing images using the provided templates (located in the folder ***Templates***):
-
-    def hist_match(img, temp):
-    ''' histogram matching from img to temp '''
-    matcher = sitk.HistogramMatchingImageFilter()
-    matcher.SetNumberOfHistogramLevels(1024)
-    matcher.SetNumberOfMatchPoints(7)
-    matcher.ThresholdAtMeanIntensityOn()
-    res = matcher.Execute(img, temp)
-    return res
     
    2. Run the test:
       
@@ -118,6 +109,11 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
 
     # For a Docker-based installation of Caffe:
     dpython Reconstruction_test_docker.py 
+
+Please select the corresponding models and reference files based on your requirements:
+   -  Pretrained model setup: “mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)”, where "reconstruction_24m_T1.caffemodel" is the pretrained model file containing the learned weights for the network.
+   -  Path to the test images: “datapath='Testing_subjects/'”
+   -  Reference file for histogram matching: “reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr')”
     
 ## System requirements:
 
