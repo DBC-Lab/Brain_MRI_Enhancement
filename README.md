@@ -3,10 +3,10 @@
 
 _Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press_
 
-### Structural magnetic resonance imaging is a vital tool for neuroimaging analyses, but the quality of MR images is often degraded by various factors, such as motion artifacts, large slice thickness, and imaging noise. These factors can cause confounding effects and pose significant challenges, especially in young children who tend to move during acquisition.
+### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
 ## Method
-We proposed a tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. Our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
+Structural magnetic resonance imaging is a vital tool for neuroimaging analyses, but the quality of MR images is often degraded by various factors, such as motion artifacts, large slice thickness, and imaging noise. These factors can cause confounding effects and pose significant challenges, especially in young children who tend to move during acquisition. We proposed a tissue-aware reconstruction framework that can improve image quality through motion correction, super-resolution, denoising, and contrast enhancement. Our framework exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for "end-to-end" neuroimaging analyses, such as tissue segmentation.
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_flowchart.png" width="100%">    
 
 ### Motion correction and super resolution:
