@@ -1,20 +1,26 @@
-## Training samples:
+   1. Download an example training dataset (in HDF5 format) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0. More information about HDF5 format is avaliable at <https://www.mathworks.com/help/matlab/hdf5-files.html>.
+   2. Train a caffe model:
 
-Please download an example training dataset (*.hdf5) from https://www.dropbox.com/scl/fo/8jrphll6vu4sbw56x9ni7/h?rlkey=nfspdxoyr0u61i1xh29dauohu&dl=0.
-
-## To train a caffe model, please use this command: 
-
-    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &   # for local installation of Caffe
+    # For a local installation of Caffe
+    caffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &
     
-    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 &   # for Docker installation of Caffe
+    # For a Docker-based installation of Caffe
+    dcaffe train -solver solver.prototxt -gpu 0 >train.log 2>&1 & 
 
-***solver.prototxt***: set your learning rate (base_lr: 0.005), network (net: "train.prototxt"), step size (stepsize=222),  saving path (snapshot_prefix: "./"), etc.
+- ***solver.prototxt***: This file defines the training configurations for your model, including:
 
-***-gpu***: set GPU number.
+  - The base learning rate (base_lr: 0.005).
+  - The network definition file (net: "train.prototxt").
+  - The step size for learning rate adjustments (stepsize: 222). Adjust this parameter based on the number of training samples..
+  - The saving path for model snapshots (snapshot_prefix: "./").
+  - Other training-related parameters.
 
-***train.log***: a log file to record the model training stage.
+- ***-gpu***: Specifies the GPU ID to use for training.
 
-***train.prototxt***: network architecture.
+- ***train.log***: A log file that records details of the model's training process.
 
-This is the architecture based on Anatomy-Guided Densely-Connected U-Net (ADU-Net) in the paper of "L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," in MICCAI, 2018, pp. 411-419."
+- ***train.prototxt***: Defines the network architecture.
+
+The network architecture is based on the **Anatomy-Guided Densely-Connected U-Net (ADU-Net)**, as described in the paper:
+L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," MICCAI, 2018, pp. 411-419. [Paper](https://liwang.web.unc.edu/wp-content/uploads/sites/11006/2018/10/Volume-Based-Analysis-Of-6-Month-Old.pdf) [Code](https://liwang.web.unc.edu/wp-content/uploads/sites/11006/2020/04/Anatomy_Guided_Densely_Connected_U_Net.txt)
 
