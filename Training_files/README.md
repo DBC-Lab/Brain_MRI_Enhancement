@@ -23,6 +23,10 @@
 
 - ***train.prototxt***: Defines the network architecture.
 
+- ***train_dataset.txt***: Contains the file names of the training dataset.
+  
+- ***test_dataset.txt***: Contains the file names of the testing dataset.
+
 The network architecture is based on the **Anatomy-Guided Densely-Connected U-Net (ADU-Net)**, as described in the paper:
 L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis of 6-month-old infant brain MRI for autism biomarker identification and early diagnosis," MICCAI, 2018, pp. 411-419. [Paper](https://liwang.web.unc.edu/wp-content/uploads/sites/11006/2018/10/Volume-Based-Analysis-Of-6-Month-Old.pdf) [Code](https://liwang.web.unc.edu/wp-content/uploads/sites/11006/2020/04/Anatomy_Guided_Densely_Connected_U_Net.txt)
 
