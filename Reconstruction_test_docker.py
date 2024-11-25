@@ -7,13 +7,14 @@ import argparse
 parser = argparse.ArgumentParser(description="Brain MRIs enhancement model")
 
 
-parser.add_argument('--Input', type=str, required=True, help="Path to the input test images, e.g., ./Testing_subjects")
-parser.add_argument('--Output', type=str, required=True, help="Path where the output results will be saved, e.g., ./Testing_subjects")
-parser.add_argument('--Age', type=str, required=True, help="Age group of the test images, i.e., fetal, 0, 3, 6, 9, 12, 18, 24, adult")
+parser.add_argument('--input_path', type=str, required=True, help="Path to the input test images (e.g., ./Testing_subjects/)")
+parser.add_argument('--output_path', type=str, required=True, help="Path to the enhanced images (e.g., ./Testing_subjects/output/)")
+parser.add_argument('--age_in_month', type=str, required=True, help="Age group of the test images (e.g., fetal, 0, 3, 6, 9, 12, 18, 24, adult)")
 args = parser.parse_args()
     
-datapath=args.Input #the path to your test images
-age_number=args.Age
+datapath=args.input_path #the path to your test images
+datapath_output=args.output_path #the path to your test images
+age_number=args.age_in_month
 
 if age_number=='adult':
     age_number='24'
@@ -178,7 +179,7 @@ def main():
     	result_nii = caster.Execute(result_nii)
     	result_nii = sitk.Cast(result_nii, sitk.sitkUInt16)  #Uint16 is short type;
         
-        sitk.WriteImage(result_nii,'./{}/{}-enhanced.nii'.format(datapath, myid))   
+        sitk.WriteImage(result_nii,'./{}/{}-enhanced.nii'.format(datapath_output, myid))   
 
 
 if __name__ == '__main__':     
