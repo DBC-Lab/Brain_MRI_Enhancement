@@ -109,10 +109,10 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
    2. Run the test:
       
     # For a local installation of Caffe:
-    python2 Reconstruction_test.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
+    python2 BME_X.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
    
     # For a Docker-based installation of Caffe:
-    dpython Reconstruction_test_docker.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
+    dpython BME_X_docker.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
 
 Please select the corresponding models and reference files based on your requirements:
    -  --input_path Path to the input test images (e.g., ./Testing_subjects/)
