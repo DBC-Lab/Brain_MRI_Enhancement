@@ -37,6 +37,15 @@ step3=12
 
 step=[step1,step2,step3]
 NumOfClass=4 #the number of classes in this segmentation project, e.g., WM, GM, CSF and background in this case
+
+def hist_match(img, temp):
+    ''' histogram matching from img to temp '''
+    matcher = sitk.HistogramMatchingImageFilter()
+    matcher.SetNumberOfHistogramLevels(1024)
+    matcher.SetNumberOfMatchPoints(7)
+    matcher.ThresholdAtMeanIntensityOn()
+    res = matcher.Execute(img, temp)
+    return res
     
 def cropCubic(matFA,fileID,d,step,rate):
     eps=1e-5
@@ -112,6 +121,7 @@ def dice(im1, im2,tid):
 
 def main():
     datapath='Testing_subjects/' #the path to your test images
+    reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr') #reference file for histogram matching, e.g., Template_T1_24.??? is the reference file for testing images at 24 months and older.
 
     files=[i for i in os.listdir(datapath) if '.hdr' in i ]
     for dataT1filename in files:
@@ -120,13 +130,17 @@ def main():
         dataT1fn=os.path.join(datapath,dataT1filename)
         print dataT1fn
         imgOrg=sitk.ReadImage(dataT1fn)
-        mrimgT1=sitk.GetArrayFromImage(imgOrg)
+        mrimg=sitk.GetArrayFromImage(imgOrg)
+        
+        print('Histogram martching ...')
+        matched_data =hist_match(imgOrg, reference_name)
+        matched_data_array = sitk.GetArrayFromImage(matched_data)
 
         rate=1
-        heatmap = cropCubic(mrimgT1,fileID,dSeg,step,rate)
+        Recon = cropCubic(matched_data_array,fileID,dFA,step,rate)
         
-        volOut=sitk.GetImageFromArray(heatmap)
-	volOut.SetSpacing([0.8,0.8,0.8])
+        volOut=sitk.GetImageFromArray(Recon)
+        volOut.SetSpacing([0.8,0.8,0.8])
         sitk.WriteImage(volOut,'./{}/{}-recon.nii.gz'.format(datapath, myid))   
 
 
