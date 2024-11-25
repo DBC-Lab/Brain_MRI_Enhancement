@@ -100,7 +100,7 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
    
    ***Templates***: Includes eight corresponding image templates for histogram matching.
    
-   ***Testing_subjects***: A testing sample at 24 months (_test_img.???_). The corresponding reconstruction result (_test_img-recon.nii.gz_).
+   ***Testing_subjects***: A testing sample at 24 months (_test_img.nii_). The corresponding reconstruction result (_test_img-enhanced.nii_).
 
 ### How to test
    
@@ -109,17 +109,17 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
    2. Run the test:
       
     # For a local installation of Caffe:
-    python2 Reconstruction_test.py   
+    python2 Reconstruction_test.py --Input ./Testing_subjects --Output ./Testing_subjects --Age 24   
 
     # For a Docker-based installation of Caffe:
-    dpython Reconstruction_test_docker.py 
+    dpython Reconstruction_test_docker.py --Input ./Testing_subjects --Output ./Testing_subjects --Age 24
 
 Please select the corresponding models and reference files based on your requirements:
-   -  Pretrained model setup: "mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)", where 'reconstruction_24m_T1.caffemodel' is the pretrained model file containing the learned weights for the network.
-   -  Path to the test images: "datapath='Testing_subjects/'"
-   -  Reference file for histogram matching: "reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr')"
-   -  _test_24m.xxx_: An example test image at 24 months of age, used as inputs for _Reconstruction_test_docker.py_ and _Reconstruction_test.py_. 
-   -  _test_24m-recon.nii.gz_: The corresponding enhanced results for _test_24m.xxx_, generated as output by _Reconstruction_test_docker.py_ and _Reconstruction_test.py_.
+   -  --Input Path to the input test images, e.g., ./Testing_subjects
+   -  --Output Path where the output results will be saved, e.g., ./Testing_subjects
+   -  --Age Age group of the test images, i.e., fetal, 0, 3, 6, 9, 12, 18, 24, adult
+   -  _test_24m.nii_: An example test image at 24 months of age, used as inputs for _Reconstruction_test_docker.py_ and _Reconstruction_test.py_. 
+   -  _test_24m-recon.nii_: The corresponding enhanced results for _test_24m.xxx_, generated as output by _Reconstruction_test_docker.py_ and _Reconstruction_test.py_.
 
 ## System requirements
 
