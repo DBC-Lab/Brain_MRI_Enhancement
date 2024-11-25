@@ -118,7 +118,9 @@ Please select the corresponding models and reference files based on your require
    -  Pretrained model setup: "mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)", where 'reconstruction_24m_T1.caffemodel' is the pretrained model file containing the learned weights for the network.
    -  Path to the test images: "datapath='Testing_subjects/'"
    -  Reference file for histogram matching: "reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr')"
-    
+   -  _test_24m.xxx_: An example test image at 24 months of age, used as inputs for _Reconstruction_test_docker.py_ and _Reconstruction_test.py_. 
+   -  _test_24m-recon.nii.gz_: The corresponding enhanced results for _test_24m.xxx_, generated as output by _Reconstruction_test_docker.py_ and _Reconstruction_test.py_.
+
 ## System requirements
 
 Ubuntu 20.04.1
