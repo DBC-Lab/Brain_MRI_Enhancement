@@ -3,6 +3,10 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
+<div align="center">
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_intro.png" width="100%"> 
+</div> 
+
 ## Version
 Current version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/zenodo.14047881))
 
