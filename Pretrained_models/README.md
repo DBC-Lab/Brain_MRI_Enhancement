@@ -6,7 +6,7 @@ _deploy.prototxt/deploy1.prototxt_: a deploy file used for testing stage, note t
 
 _reconstruction_??m_T1.caffemodel_: pretrained models used to test T1-weighted images at ?? months. 
 
-_reconstruction_fetal_T2.caffemodel_: pretrained models used to test T2-weighted images at the fetal stage. 
+_reconstruction_fetal_T2.caffemodel_: pretrained models used to test T2-weighted images at the fetal stage. Please download this model from https://www.dropbox.com/scl/fi/ebarde3a4a51bhln3l422/reconstruction_fetal_T2.caffemodel?rlkey=r42d8q4rf57rwhbdg97p3evue&st=v0tjodhh&dl=0 
 
 ## Adult images: 
 
