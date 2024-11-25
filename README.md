@@ -109,23 +109,21 @@ L. Wang, G. Li, F. Shi, X. Cao, C. Lian, D. Nie, et al., "Volume-based analysis 
    2. Run the test:
       
     # For a local installation of Caffe:
-    python2 Reconstruction_test.py --Input ./Testing_subjects --Output ./Testing_subjects --Age 24   
-
+    python2 Reconstruction_test.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
+   
     # For a Docker-based installation of Caffe:
-    dpython Reconstruction_test_docker.py --Input ./Testing_subjects --Output ./Testing_subjects --Age 24
+    dpython Reconstruction_test_docker.py --input_path ./Testing_subjects --output_path ./Testing_subjects/output --age_in_month 24
 
 Please select the corresponding models and reference files based on your requirements:
-   -  --Input Path to the input test images, e.g., ./Testing_subjects
-   -  --Output Path where the output results will be saved, e.g., ./Testing_subjects
-   -  --Age Age group of the test images, i.e., fetal, 0, 3, 6, 9, 12, 18, 24, adult
+   -  --input_path Path to the input test images (e.g., ./Testing_subjects/)
+   -  --output_path Path to the enhanced images (e.g., ./Testing_subjects/output/)
+   -  --age_in_month Age group of the test images (e.g., fetal, 0, 3, 6, 9, 12, 18, 24, adult)
    -  _test_24m.nii_: An example test image at 24 months of age, used as inputs for _Reconstruction_test_docker.py_ and _Reconstruction_test.py_. 
    -  _test_24m-recon.nii_: The corresponding enhanced results for _test_24m.xxx_, generated as output by _Reconstruction_test_docker.py_ and _Reconstruction_test.py_.
 
 ## System requirements
-
-Ubuntu 20.04.1
     
-Caffe version 1.0.0-rc3
+Caffe==1.0.0-rc3, Python==2.7.17, SimpleITK==1.2.4, numpy==1.13.3, scipy==1.2.3.
 
 We provide two options for installing the Caffe framework on your local PC.  
     
