@@ -203,6 +203,9 @@ Then, the screen will show:
     
 Typical install time: few minutes.
 
+## Support
+- **Issue**: If you encounter any issues or have concerns, please submit them here https://github.com/DBC-Lab/Brain_MRI_Enhancement/issues 
+  
 ## License
 
 MIT License
