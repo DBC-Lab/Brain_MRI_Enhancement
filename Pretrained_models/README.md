@@ -1,6 +1,6 @@
 ## Deploy setting
 
-_deploy.prototxt/fetal_deploy.prototxt_: a deploy file used for testing stage, note that in the testing phase, you have to change "use_global_stats: false" to "use_global_stats: true". 
+_deploy.prototxt/deploy1.prototxt_: a deploy file used for testing stage, note that in the testing phase, you have to change "use_global_stats: false" to "use_global_stats: true". 
 
 ## Pretrained models:
 
