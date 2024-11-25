@@ -202,6 +202,10 @@ Then, the screen will show:
 <img src="https://github.com/YueSun814/Img-folder/blob/main/caffe_display.jpg" width="50%">
     
 Typical install time: few minutes.
+
+## License
+
+MIT License
    
 
     
