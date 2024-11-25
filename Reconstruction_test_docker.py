@@ -1,12 +1,23 @@
 import SimpleITK as sitk
-
-from multiprocessing import Pool
 import os
-import h5py
 import numpy as np  
-import scipy.io as scio
 from scipy import ndimage as nd
+import argparse
 
+parser = argparse.ArgumentParser(description="Brain MRIs enhancement model")
+
+
+parser.add_argument('--Input', type=str, required=True, help="Path to the input test images, e.g., ./Testing_subjects")
+parser.add_argument('--Output', type=str, required=True, help="Path where the output results will be saved, e.g., ./Testing_subjects")
+parser.add_argument('--Age', type=str, required=True, help="Age group of the test images, i.e., fetal, 0, 3, 6, 9, 12, 18, 24, adult")
+args = parser.parse_args()
+    
+datapath=args.Input #the path to your test images
+age_number=args.Age
+
+if age_number=='adult':
+    age_number='24'
+    
 # Make sure that caffe is on the python path:
 caffe_root = '/usr/local/InfantPipeline/lib/caffe/'  # Make sure that caffe is on the python path  
 import sys
@@ -21,7 +32,19 @@ solver = None  # ignore this workaround for lmdb data (can't instantiate two sol
 protopath='Pretrained_models/'    #the path to accesss pretrained models and deploy.prototxt
 
 #change pretrained models to match the age of test image, "reconstruction_24m_T1.caffemodel" is used to test images at 24 months and older
-mynet = caffe.Net(protopath+'deploy.prototxt',protopath+'reconstruction_24m_T1.caffemodel',caffe.TEST)     
+if age_number=='fetal':
+    mynet = caffe.Net(protopath+'deploy1.prototxt',protopath+'reconstruction_fetal_T2.caffemodel',caffe.TEST)  
+    print("Model: reconstruction_fetal_T2.caffemodel")
+elif age_number=='24':
+    model_file = 'reconstruction_{}m_T1.caffemodel'.format(age_number)
+    mynet = caffe.Net(protopath + 'deploy.prototxt', protopath + model_file, caffe.TEST) 
+    print("Model: {}".format(model_file))
+else:
+    model_file = 'reconstruction_{}m_T1.caffemodel'.format(age_number)
+    mynet = caffe.Net(protopath + 'deploy1.prototxt', protopath + model_file, caffe.TEST) 
+    print("Model: {}".format(model_file))
+    
+    
 print("blobs {}\nparams {}".format(mynet.blobs.keys(), mynet.params.keys()))
 
 d1=40
@@ -120,10 +143,15 @@ def dice(im1, im2,tid):
     return dsc
 
 def main():
-    datapath='Testing_subjects/' #the path to your test images
-    reference_name = sitk.ReadImage('Templates/Template_T1_24.hdr') #reference file for histogram matching, e.g., Template_T1_24.??? is the reference file for testing images at 24 months and older.
+        
+    if age_number=='fetal':
+        reference_name = sitk.ReadImage('Templates/Template_T2_fetal.nii') 
+        print("Reference image: Template_T2_fetal.nii")
+    else: 
+        reference_name = sitk.ReadImage('Templates/Template_T1_{}.nii'.format(age_number)) #reference file for histogram matching, e.g., Template_T1_24.??? is the reference file for testing images at 24 months and older.
+        print("Reference image: Template_T1_{}.nii".format(age_number))
 
-    files=[i for i in os.listdir(datapath) if '.hdr' in i ]
+    files=[i for i in os.listdir(datapath) if '.nii' in i ]
     for dataT1filename in files:
         myid=dataT1filename[0:len(dataT1filename)-4]
         fileID='%s'%myid
@@ -139,9 +167,18 @@ def main():
         rate=1
         Recon = cropCubic(matched_data_array,fileID,dFA,step,rate)
         
-        volOut=sitk.GetImageFromArray(Recon)
-        volOut.SetSpacing([0.8,0.8,0.8])
-        sitk.WriteImage(volOut,'./{}/{}-recon.nii.gz'.format(datapath, myid))   
+        result_nii=sitk.GetImageFromArray(Recon) 
+        ref_nii = imgOrg
+        result_nii.SetOrigin(ref_nii.GetOrigin())
+    	result_nii.SetDirection(ref_nii.GetDirection())
+    	result_nii.SetSpacing(ref_nii.GetSpacing())
+    	pixelID = result_nii.GetPixelID()
+    	caster = sitk.CastImageFilter()
+    	caster.SetOutputPixelType(pixelID)
+    	result_nii = caster.Execute(result_nii)
+    	result_nii = sitk.Cast(result_nii, sitk.sitkUInt16)  #Uint16 is short type;
+        
+        sitk.WriteImage(result_nii,'./{}/{}-enhanced.nii'.format(datapath, myid))   
 
 
 if __name__ == '__main__':     
