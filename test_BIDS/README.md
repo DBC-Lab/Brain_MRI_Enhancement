@@ -29,3 +29,16 @@ or from sub-0001/ses-V01/anat/sub-0001_ses-V01_T1w.json:
 
 ## Supported age types ##
 The supported age types are: 'years', 'months', and 'gestational_weeks'. 
+
+| Filename                     | Subject   | Session   | Modality | Age     |
+|------------------------------|-----------|-----------|----------|---------|
+| sub-0001_ses-V01_T1w.nii.gz  | sub-0001  | ses-V01   | T1w      | 6 years |
+| sub-0001_ses-V02_T1w.nii.gz  | sub-0001  | ses-V02   | T1w      | 6 years |
+| sub-0002_ses-V01_T1w.nii.gz  | sub-0002  | ses-V01   | T1w      | 23 months |
+| sub-0003_ses-V01_T1w.nii.gz  | sub-0003  | ses-V01   | T1w      | 19 months |
+| sub-0004_ses-V01_T1w.nii.gz  | sub-0004  | ses-V01   | T1w      | 11 months |
+| sub-0005_ses-V01_T1w.nii.gz  | sub-0005  | ses-V01   | T1w      | 9 months |
+| sub-0006_ses-V01_T1w.nii.gz  | sub-0006  | ses-V01   | T1w      | 6 months |
+| sub-0007_ses-V01_T1w.nii.gz  | sub-0007  | ses-V01   | T1w      | 5 months |
+| sub-0008_ses-V01_T1w.nii.gz  | sub-0008  | ses-V01   | T1w      | 3 months |
+| sub-0009_ses-V01_T1w.nii.gz  | sub-0009  | ses-V01   | T2w      | 30 gestational_weeks |
