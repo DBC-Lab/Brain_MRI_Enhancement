@@ -32,6 +32,8 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       --session ses-V01 
 You can use the lifespan test data in _test_BIDS_.
 
+----------------------------------------------------------------------------------------
+
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_intro.png" width="100%"> 
 </div> 
