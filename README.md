@@ -11,14 +11,14 @@ To pull the image, use the following command:
 
 To run the Docker image, please use the following command: 
 
-    docker run --gpus '"device=2"' -it --rm \
+    docker run --gpus '"device=GPU_ID"' -it --rm \
       -v /Path/to/BIDS/data:/test \
       -v /Path/to/output:/output \
       yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
       --bids_dir /test \
       --output_dir /output \
       --subject SUBJECT \
-      --session SESSION 
+      --session SESSION
 
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_intro.png" width="100%"> 
