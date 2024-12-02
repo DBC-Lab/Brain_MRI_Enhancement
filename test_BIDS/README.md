@@ -26,3 +26,6 @@ or from sub-0001/ses-V01/anat/sub-0001_ses-V01_T1w.json:
         "IsotropicVoxelSize": 0.8,
         "Age": "6 years"
     }
+
+## Supported age types ##
+The supported age types are: 'years', 'months', and 'gestational_weeks'. 
