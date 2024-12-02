@@ -3,6 +3,23 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
+**Update**: We have provided a Docker image with all the necessary prerequisites installed for working with [BIDS files](https://bids.neuroimaging.io/).
+
+To pull the image, use the following command:
+
+    docker pull yuesun814/bme-x:v1.0.1
+
+To run the Docker image, please use the following command: 
+
+    docker run --gpus '"device=2"' -it --rm \
+      -v /Path/to/BIDS/data:/test \
+      -v /Path/to/output:/output \
+      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      --bids_dir /test \
+      --output_dir /output \
+      --subject SUBJECT \
+      --session SESSION 
+
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_intro.png" width="100%"> 
 </div> 
