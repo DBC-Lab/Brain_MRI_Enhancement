@@ -11,7 +11,7 @@ To pull the image, use the following command:
 
 To run the Docker image, please use the following command: 
 
-    docker run --gpus '"device=GPU_ID"' -it --rm \
+    docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
       -v /Path/to/BIDS/data:/test \
       -v /Path/to/output:/output \
       yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
@@ -22,7 +22,7 @@ To run the Docker image, please use the following command:
       
 For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0001', and session is 'ses-V01':
 
-    docker run --gpus '"device=2"' -it --rm \
+    docker run --gpus '"device=2"' --user $(id -u):$(id -g) -it --rm \
       -v /BME_X/test:/test \
       -v /BME_X/output:/output \
       yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
