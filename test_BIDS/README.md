@@ -40,5 +40,5 @@ The supported age types are: 'years', 'months', and 'gestational_weeks'.
 | sub-0005_ses-V01_T1w.nii.gz  | sub-0005  | ses-V01   | T1w      | 9 months |
 | sub-0006_ses-V01_T1w.nii.gz  | sub-0006  | ses-V01   | T1w      | 6 months |
 | sub-0007_ses-V01_T1w.nii.gz  | sub-0007  | ses-V01   | T1w      | 4 months |
-| sub-0008_ses-V01_T1w.nii.gz  | sub-0008  | ses-V01   | T1w      | 0 months |
+| sub-0008_ses-V01_T1w.nii.gz  | sub-0008  | ses-V01   | T1w      | 1 months |
 | sub-0009_ses-V01_T1w.nii.gz  | sub-0009  | ses-V01   | T2w      | 30 gestational_weeks |
