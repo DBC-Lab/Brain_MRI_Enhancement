@@ -3,7 +3,7 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
-**Update (12/01/2024)**: We have provided a Docker image with all the necessary prerequisites installed for working with [BIDS files](https://bids.neuroimaging.io/).
+**Update (12/01/2024)**: We have provided a Docker image with all the necessary prerequisites installed for working with the BME_X model and [BIDS files](https://bids.neuroimaging.io/).
 
 To pull the image, use the following command:
 
