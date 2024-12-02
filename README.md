@@ -19,6 +19,17 @@ To run the Docker image, please use the following command:
       --output_dir /output \
       --subject SUBJECT \
       --session SESSION
+      
+For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0009', and session is 'ses-V01':
+
+    docker run --gpus '"device=2"' -it --rm \
+      -v /BME_X/test:/test \
+      -v /BME_X/output:/output \
+      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      --bids_dir /test \
+      --output_dir /output \
+      --subject sub-0009 \
+      --session ses-V01 
 
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_intro.png" width="100%"> 
