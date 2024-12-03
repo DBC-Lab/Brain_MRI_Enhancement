@@ -6,7 +6,7 @@ Age information is required for the BME-X model and can be retrieved from the BI
 
 For example, the BME-X model could read _age information_ for sub-0001/ses-V01/anat/sub-0001_ses-V01_T1w.nii.gz from sub-0001/ses-V01/sub-0001_ses-V01_scans.tsv:
 
-| Filename                     | Age     |
+| Filename                     | age     |
 |------------------------------|---------|
 | sub-0001_ses-V01_T1w.nii.gz  | 6 |
 
@@ -25,24 +25,27 @@ sub-0001/ses-V01/sub-0001_ses-V01_scans.json:
     }
 
 or from sub-0001/sub-0001_sessions.tsv:
-| Subject   | Session   | Age     |
+| Subject   | Session   | age     |
 |-----------|-----------|---------|
-| sub-0001  | ses-V01   | 6 years |
-| sub-0001  | ses-V02   | 6 years |
+| sub-0001  | ses-V01   | 6 |
+| sub-0001  | ses-V02   | 6 |
 
-or from sub-0001/ses-V01/anat/sub-0001_ses-V01_T1w.json:
+sub-0001/sub-0001_sessions.json:
 
     {
-        "Manufacturer": "Siemens",
-        "MagneticFieldStrength": 3.0,
-        "ReceiverCoil": "32-channel",
-        "MRAcquisitionType": "3D",
-        "IsotropicVoxelSize": 0.8,
-        "Age": "6 years"
+        "site": {
+            "Description": "xxxx",
+            "Levels": [
+            ]
+        },
+        "age": {
+            "Description": "Age (in years) of the candidate at the time of the session",
+            "Units": "years"
+        }
     }
 
 ## Supported age types ##
-The supported age types are: 'years', 'months', and 'gestational_weeks'. 
+The supported age types are: 'weeks', 'years', 'months', and 'gestational_weeks'. 
 
 | Filename                     | Subject   | Session   | Modality | Age     |
 |------------------------------|-----------|-----------|----------|---------|
