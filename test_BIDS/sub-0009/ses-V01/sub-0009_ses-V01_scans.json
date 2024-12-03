@@ -1,0 +1,11 @@
+{
+    "site": {
+        "Description": "xxxx",
+        "Levels": [
+        ]
+    },
+    "age": {
+        "Description": "Age (in years) of the candidate at the time of the session",
+        "Units": "gestational_weeks"
+    }
+}
