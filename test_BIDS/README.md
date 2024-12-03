@@ -6,9 +6,23 @@ Age information is required for the BME-X model and can be retrieved from the BI
 
 For example, the BME-X model could read _age information_ for sub-0001/ses-V01/anat/sub-0001_ses-V01_T1w.nii.gz from sub-0001/ses-V01/sub-0001_ses-V01_scans.tsv:
 
-| Filename                     | Subject   | Session   | Modality | Age     |
-|------------------------------|-----------|-----------|----------|---------|
-| sub-0001_ses-V01_T1w.nii.gz  | sub-0001  | ses-V01   | T1w      | 6 years |
+| Filename                     | Age     |
+|------------------------------|---------|
+| sub-0001_ses-V01_T1w.nii.gz  | 6 |
+
+sub-0001/ses-V01/sub-0001_ses-V01_scans.json:
+
+    {
+        "site": {
+            "Description": "xxxx",
+            "Levels": [
+            ]
+        },
+        "age": {
+            "Description": "Age (in years) of the candidate at the time of the session",
+            "Units": "years"
+        }
+    }
 
 or from sub-0001/sub-0001_sessions.tsv:
 | Subject   | Session   | Age     |
