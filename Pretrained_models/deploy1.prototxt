@@ -1,34 +1,3 @@
-# Simple single-layer network to showcase editing model parameters.
-#layer {
-#  name: "data"
-#  type: "HDF5Data"
-#  top: "dataT1"
-#  top: "dataT2"
-#  top: "dataSeg"
-#  include {
-#    phase: TRAIN 
-#  }
-#  hdf5_data_param {
-#    source: "./trainInfant_list.txt"
-#    batch_size: 10
-#    shuffle: true 
-#  }
-#}
-#layer {
-#  name: "data"
-#  type: "HDF5Data"
-#  top: "dataT1"
-#  top: "dataT2"
-#  top: "dataSeg"
-#  include {
-#    phase: TEST
-#  }
-#  hdf5_data_param {
-#    source: "./testInfant_list.txt"
-#    batch_size: 10
-#    shuffle: true
-#  }
-#}
 name: "infant"
 input: "dataT1"
 input_shape {
