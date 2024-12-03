@@ -1,3 +1,3 @@
-subject	session	age
-sub-0001	ses-V01	6 years
-sub-0001	ses-V02	6 years
+subject	session_id	age
+sub-0001	ses-V01	6 
+sub-0001	ses-V02	6 
