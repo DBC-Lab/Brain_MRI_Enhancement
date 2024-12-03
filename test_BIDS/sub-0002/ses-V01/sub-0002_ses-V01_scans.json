@@ -1,0 +1,11 @@
+{
+    "site": {
+        "Description": "Site where the session data was collected",
+        "Levels": [
+        ]
+    },
+    "age": {
+        "Description": "Age (in years) of the candidate at the time of the session",
+        "Units": "months"
+    }
+}
