@@ -1,8 +1,0 @@
-{
-    "Manufacturer": "Siemens",
-    "MagneticFieldStrength": 3.0,
-    "ReceiverCoil": "32-channel",
-    "MRAcquisitionType": "3D",
-    "IsotropicVoxelSize": 0.8,
-    "Age": "23 months"
-}
