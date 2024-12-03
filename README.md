@@ -11,6 +11,7 @@ To pull the image, use the following command:
 
 To run the Docker image, please use the following command: 
 
+    mkdir -p /Path/to/output && \
     docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
       -v /Path/to/BIDS/data:/test \
       -v /Path/to/output:/output \
@@ -22,6 +23,7 @@ To run the Docker image, please use the following command:
       
 For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0001', and session is 'ses-V01':
 
+    mkdir -p /BME_X/output && \
     docker run --gpus '"device=2"' --user $(id -u):$(id -g) -it --rm \
       -v /BME_X/test:/test \
       -v /BME_X/output:/output \
