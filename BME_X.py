@@ -8,8 +8,7 @@ parser = argparse.ArgumentParser(
     description="Brain MRIs Enhancement Foundation Model (BME-X)\n"
                 "Version: v1.0.1\n"
                 "Authors: Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang\n"
-                "Reference: A foundation model for enhancing magnetic resonance images and downstream "
-                "segmentation, registration, and diagnostic tasks, Nature Biomedical Engineering, 2024, in press.\n"
+                "Reference: A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). https://doi.org/10.1038/s41551-024-01283-7\n"
                 "Contacts: li_wang@med.unc.edu, yuesun@med.unc.edu\n"
                 "Code: <https://github.com/DBC-Lab/Brain_MRI_Enhancement>\n"
                 "------------------------------------------",
