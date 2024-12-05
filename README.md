@@ -44,7 +44,7 @@ You can use the lifespan test data in _test_BIDS_.
 Current version: 1.0.1 ([DOI: 10.5281/zenodo.14047881](https://doi.org/10.5281/zenodo.14047881))
 
 ## Papers
-Yue Sun, Limei Wang, Gang Li, Weili Lin, Li Wang. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks, Nature Biomedical Engineering, 2024, in press
+Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). https://doi.org/10.1038/s41551-024-01283-7
 
 ## Intended Usage
 BME-X is designed for researchers and clinicians working with structural MRIs to enhance image quality and perform standardized analyses.
