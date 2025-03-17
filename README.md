@@ -3,7 +3,7 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
-**Update (03/16/2025)**: We have provided the BME-X models trained using PyTorch framework, for both T1w and T2w image enhancement. 
+**Update (03/16/2025)**: We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
@@ -14,7 +14,7 @@ To run the Docker image, please use the following command:
     docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
       -v /Path/to/BIDS/data:/test \
       -v /Path/to/output:/output \
-      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      yuesun814/bme-x:v1.0.2 /usr/bin/python3 /BME_X.py \
       --bids_dir /test \
       --output_dir /output \
       --subject SUBJECT \
@@ -27,7 +27,7 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
     docker run --gpus '"device=2"' --user $(id -u):$(id -g) -it --rm \
       -v /BME_X/test:/test \
       -v /BME_X/output:/output \
-      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      yuesun814/bme-x:v1.0.2 /usr/bin/python3 /BME_X.py \
       --bids_dir /test \
       --output_dir /output \
       --subject sub-0001 \
