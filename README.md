@@ -8,7 +8,7 @@ To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
 
-To run the Docker image, please use the following command: 
+To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
 
     mkdir -p /Path/to/output && \
     docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
