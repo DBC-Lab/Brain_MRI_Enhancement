@@ -21,7 +21,7 @@ To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test da
       --session SESSION \
       --suffix SUFFIX
       
-For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0001', session is 'ses-V01' and suffix is 'T1w':
+For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0001', session is 'ses-V01' and suffix is 'T2w':
 
     mkdir -p /BME_X/output && \
     docker run --gpus '"device=2"' --user $(id -u):$(id -g) -it --rm \
@@ -32,9 +32,13 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       --output_dir /output \
       --subject sub-0001 \
       --session ses-V01 \
-      --suffix T1w
+      --suffix T2w
       
-You can use the lifespan test data in _test_BIDS_.
+You can use the lifespan test data in _test_BIDS_withBrainMask_.
+
+<div align="center">
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
+</div> 
 
 **Update (12/01/2024)**: We have provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
 
