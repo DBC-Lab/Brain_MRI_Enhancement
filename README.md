@@ -8,7 +8,7 @@ To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
 
-To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
+1. To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
 
     mkdir -p /Path/to/output && \
     docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
@@ -36,6 +36,18 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       
 You can use the lifespan test data in _test_BIDS_withBrainMask_.
 
+2. Directly provide the paths for the input data (e.g., '/BME_X/test/sub-0001/ses-V01/anat') and output results (e.g., '/BME_X/output'), as well as age_in_month and suffix:
+
+    mkdir -p /BME_X/output && \
+    docker run --gpus '"device=0"' --user $(id -u):$(id -g) -it --rm \
+      -v /BME_X/test:/test \
+      -v /BME_X/output:/output \
+      yuesun814/bme-x:v1.0.2 /usr/bin/python3 /BME_X_enhanced.py  \
+      --input_path /sub-0001/ses-V01/anat \
+      --output_path /output/ \
+      --age_in_month 72 \
+      --suffix T2w
+   
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
 </div> 
