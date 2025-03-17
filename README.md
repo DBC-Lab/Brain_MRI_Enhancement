@@ -4,6 +4,10 @@
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
 ### Update (03/16/2025): We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
+<div align="center">
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
+</div> 
+
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
@@ -46,11 +50,7 @@ You can use the lifespan test data in _test_BIDS_withBrainMask_.
       --input_path /sub-0001/ses-V01/anat \
       --output_path /output/ \
       --age_in_month 72 \
-      --suffix T2w
-      
-<div align="center">
-<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
-</div> 
+      --suffix T2w      
 
 ### Update (12/01/2024): We have provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
 
