@@ -3,6 +3,41 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
+**Update (03/16/2025)**: We have provided the BME-X models trained using PyTorch framework, for both T1w and T2w image enhancement. 
+
+provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). 
+To pull the image, use the following command:
+
+    docker pull yuesun814/bme-x:v1.0.2
+
+To run the Docker image, please use the following command: 
+
+    mkdir -p /Path/to/output && \
+    docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
+      -v /Path/to/BIDS/data:/test \
+      -v /Path/to/output:/output \
+      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      --bids_dir /test \
+      --output_dir /output \
+      --subject SUBJECT \
+      --session SESSION \
+      --suffix SUFFIX
+      
+For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the path to the output directory is '/BME_X/output', subject is 'sub-0001', session is 'ses-V01' and suffix is 'T1w':
+
+    mkdir -p /BME_X/output && \
+    docker run --gpus '"device=2"' --user $(id -u):$(id -g) -it --rm \
+      -v /BME_X/test:/test \
+      -v /BME_X/output:/output \
+      yuesun814/bme-x:v1.0.1 /usr/bin/python3 /BME_X.py \
+      --bids_dir /test \
+      --output_dir /output \
+      --subject sub-0001 \
+      --session ses-V01 \
+      --suffix T1w
+      
+You can use the lifespan test data in _test_BIDS_.
+
 **Update (12/01/2024)**: We have provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
 
 To pull the image, use the following command:
