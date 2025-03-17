@@ -5,7 +5,7 @@
 
 ### Update (03/16/2025): We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 <div align="center">
-<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v10.png" width="80%"> 
 </div> 
 
 To pull the image, use the following command:
