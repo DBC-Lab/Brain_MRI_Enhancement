@@ -3,12 +3,12 @@
 
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
-**Update (03/16/2025)**: We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
+### Update (03/16/2025): We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
 
-1. To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
+#### a. To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
 
     mkdir -p /Path/to/output && \
     docker run --gpus '"device=GPU_ID"' --user $(id -u):$(id -g) -it --rm \
@@ -36,7 +36,7 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       
 You can use the lifespan test data in _test_BIDS_withBrainMask_.
 
-2. Directly provide the paths for the input data (e.g., '/BME_X/test/sub-0001/ses-V01/anat') and output results (e.g., '/BME_X/output'), as well as age_in_month and suffix:
+#### b. Directly provide the paths for the input data (e.g., '/BME_X/test/sub-0001/ses-V01/anat') and output results (e.g., '/BME_X/output'), as well as age_in_month and suffix:
 
     mkdir -p /BME_X/output && \
     docker run --gpus '"device=0"' --user $(id -u):$(id -g) -it --rm \
@@ -47,12 +47,12 @@ You can use the lifespan test data in _test_BIDS_withBrainMask_.
       --output_path /output/ \
       --age_in_month 72 \
       --suffix T2w
-   
+      
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v102.png" width="80%"> 
 </div> 
 
-**Update (12/01/2024)**: We have provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
+### Update (12/01/2024): We have provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
 
 To pull the image, use the following command:
 
