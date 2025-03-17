@@ -5,12 +5,21 @@
 
 ### Update (03/16/2025): We have updated the BME-X models, trained using the _PyTorch_ framework, for enhancing both _T1w_ and _T2w_ images. The enhancement model was trained with both the _cerebrum_ and _cerebellum_, and the _skull part_ was reintroduced after enhancement. 
 <div align="center">
-<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v10.png" width="80%"> 
+<img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v2.png" width="80%"> 
 </div> 
 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
+
+#### RAI orientation, Intensity inhomogeneity correction and Brain mask:
+
+We recommend using the [LifespanStrip framework](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) to obtain the required inputs for the BME-X model. 
+After applying the LifespanStrip framework to raw MR images, please rename the output files as follows:
+
+    *_T?w-reorient-n4.nii.gz → *_T?w.nii.gz
+
+    *_T?w-reorient-brainmask.nii.gz → *_T?w-brainmask.nii.gz
 
 #### a. To run the Docker image with [BIDS files](https://bids.neuroimaging.io/) test data, please use the following command: 
 
