@@ -4,8 +4,6 @@
 ### A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.
 
 **Update (03/16/2025)**: We have provided the BME-X models trained using PyTorch framework, for both T1w and T2w image enhancement. 
-
-provided a Docker image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.2
