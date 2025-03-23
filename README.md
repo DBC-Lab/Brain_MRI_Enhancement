@@ -56,7 +56,7 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --session_id V02
         
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
-We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. Additionally, the **Tissue Contrast T-score (TCT)** is provided for images both before and after enhancement.
+We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v2.png" width="80%"> 
 </div> 
