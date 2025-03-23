@@ -19,7 +19,42 @@ To pull the image, use the following command:
 Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). https://doi.org/10.1038/s41551-024-01283-7
 
 Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng (2025). https://doi.org/10.1038/s41551-024-01337-w
-    
+
+#### How to Run the Container
+
+1. Basic Command
+   
+    Run the Docker container using the following command:
+
+    ```
+    docker run --gpus all -v /path/to/input:/app/data yuesun814/bme-x:v1.0.31 --bids_root filename_of_BIDS_dataset --subject_id id_of_subject --session_id id_of_session
+    ```
+    ***'-v /path/to/input'*** mounts the input data directory to the container's ***'/app/data'*** directory.
+   
+    ***'--bids_root'*** specifies the BIDS dataset to be processed.
+   
+    ***'--subject_id'*** specifies a subject within the BIDS dataset to be processed (optional).
+   
+    ***'--session_id'*** specifies a session within the BIDS dataset to be processed (optional).
+   
+
+3. Example Usage
+   
+    For example, using the Testing_BIDS we provided. The following command will process all the data that meets the criteria within the Testing_BIDS.
+
+    ```
+    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS
+    ```
+
+    The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 001).
+    ```
+    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS --subject_id 001
+    ```
+
+    The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
+    ```
+    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS --session_id V02
+        
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. Additionally, the **Tissue Contrast T-score (TCT)** is provided for images both before and after enhancement.
 <div align="center">
