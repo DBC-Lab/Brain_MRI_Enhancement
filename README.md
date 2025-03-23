@@ -27,7 +27,7 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
     Run the Docker container using the following command:
 
     ```
-    docker run --gpus all -v /path/to/input:/app/data yuesun814/bme-x:v1.0.31 --bids_root filename_of_BIDS_dataset --subject_id id_of_subject --session_id id_of_session
+    docker run --gpus all -v /path/to/input:/app/data yuesun814/bme-x:v1.0.3 --bids_root filename_of_BIDS_dataset --subject_id id_of_subject --session_id id_of_session
     ```
     ***'-v /path/to/input'*** mounts the input data directory to the container's ***'/app/data'*** directory.
    
@@ -40,20 +40,20 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
 3. Example Usage
    
-    For example, using the Testing_BIDS we provided. The following command will process all the data that meets the criteria within the Testing_BIDS.
+    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_.
 
     ```
-    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS
     ```
 
-    The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 001).
+    The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
     ```
-    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS --subject_id 001
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --subject_id 0001
     ```
 
     The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
-    docker run --gpus all -v /home/user/data:/app/data limeiw/lifespanstrip:v2.0.1 --bids_root Testing_BIDS --session_id V02
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --session_id V02
         
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. Additionally, the **Tissue Contrast T-score (TCT)** is provided for images both before and after enhancement.
