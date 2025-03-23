@@ -13,6 +13,12 @@
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.3
+
+#### If you use yuesun814/bme-x:v1.0.3, please cite the following two papers:
+
+Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). https://doi.org/10.1038/s41551-024-01283-7
+
+Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng (2025). https://doi.org/10.1038/s41551-024-01337-w
     
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. Additionally, the **Tissue Contrast T-score (TCT)** is provided for images both before and after enhancement.
