@@ -57,8 +57,8 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
 3. Help information
 
+    ```
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --help
-   
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 <div align="center">
