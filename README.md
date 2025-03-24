@@ -38,7 +38,7 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
     ***'--session_id'*** specifies a session within the BIDS dataset to be processed (optional).
    
 
-3. Example Usage
+2. Example Usage
    
     For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_.
 
@@ -54,7 +54,11 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
     The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --session_id V02
-        
+
+3. Help information
+
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --help
+   
 ### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 <div align="center">
