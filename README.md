@@ -54,7 +54,6 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
     The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --session_id V02
-
 3. Help information
 
     ```
