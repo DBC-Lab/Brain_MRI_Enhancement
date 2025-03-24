@@ -7,7 +7,7 @@
 We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) framework and the [BME-X](https://github.com/DBC-Lab/Brain_MRI_Enhancement.git) model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the **Quality Index (QI)** of the original images is provided for reference. Please note that the BME-X model in version v1.0.3 is the same as in v1.0.2.  
 
 <div align="center">
-<img src="https://github.com/YueSun814/Img-folder/blob/main/LifespanStrip_BME-X1.png" width="80%"> 
+<img src="https://github.com/YueSun814/Img-folder/blob/main/LifespanStrip_BME-X1.png" width="100%"> 
 </div> 
 
 To pull the image, use the following command:
