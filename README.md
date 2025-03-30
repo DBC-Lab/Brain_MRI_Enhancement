@@ -40,20 +40,20 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
 2. Example Usage
    
-    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_.
+    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_withBrainMask_.
 
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask
     ```
 
     The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --subject_id 0001
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask --subject_id 0001
     ```
 
     The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS --session_id V02
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask --session_id V02
 3. Help information
 
     ```
