@@ -40,20 +40,20 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
 2. Example Usage
    
-    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_withBrainMask_.
+    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
 
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw
     ```
 
     The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask --subject_id 0001
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --subject_id 0001
     ```
 
     The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_withBrainMask --session_id V02
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --session_id V02
 3. Help information
 
     ```
@@ -103,7 +103,7 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       --session ses-V01 \
       --suffix T2w
       
-You can use the lifespan test data in _test_BIDS_withBrainMask_.
+You can use the lifespan test data in _test_BIDS_raw_.
 
 #### b. Directly provide the paths for the input data (e.g., '/BME_X/test/sub-0001/ses-V01/anat') and output results (e.g., '/BME_X/output'), as well as age_in_month and suffix:
 
