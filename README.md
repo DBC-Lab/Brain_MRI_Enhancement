@@ -103,7 +103,7 @@ For example, if the GPU ID is 2, the path to the BIDS data is '/BME_X/test', the
       --session ses-V01 \
       --suffix T2w
       
-You can use the lifespan test data in _test_BIDS_raw_.
+You can use the lifespan test data in _test_BIDS_withBrainMask_.
 
 #### b. Directly provide the paths for the input data (e.g., '/BME_X/test/sub-0001/ses-V01/anat') and output results (e.g., '/BME_X/output'), as well as age_in_month and suffix:
 
