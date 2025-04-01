@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; BME-X - DBC Lab 1.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=baaebd52"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            BME-X - DBC Lab
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#significant">Significant</a></li>
+<li><a class="reference internal" href="#method">Method</a></li>
+<li><a class="reference internal" href="#intended-usage">Intended Usage</a><ul>
+<li><a class="reference internal" href="#motion-correction-and-super-resolution">Motion correction and super resolution</a></li>
+<li><a class="reference internal" href="#performance-on-10-963-lifespan-images-from-fetal-to-adulthood">Performance on 10,963 lifespan images from fetal to adulthood</a></li>
+<li><a class="reference internal" href="#application-on-harmonization-across-scanners-into-a-latent-common-space">Application on harmonization across scanners (into a latent common space)</a></li>
+<li><a class="reference internal" href="#preservation-of-small-lesions-during-enhancement">Preservation of small lesions during enhancement</a></li>
+<li><a class="reference internal" href="#bias-quantification-during-reconstruction">Bias quantification during reconstruction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-cite">How to cite</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-usage">Installation &amp; Usage</a><ul>
+<li><a class="reference internal" href="#download">Download</a></li>
+<li><a class="reference internal" href="#how-to-run-the-container">How to Run the Container</a><ul>
+<li><a class="reference internal" href="#basic-command">Basic Command</a></li>
+<li><a class="reference internal" href="#example-usage">Example Usage</a></li>
+<li><a class="reference internal" href="#help-information">Help Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#outputs">Outputs</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li><a class="reference internal" href="#get-help">Get Help</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">BME-X - DBC Lab</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<section id="significant">
+<h2>Significant<a class="headerlink" href="#significant" title="Link to this heading"></a></h2>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.14047881"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.14047881.svg" />
+</a>
+<p>A foundation model for the motion correction, super resolution, denoising and harmonization of magnetic resonance images, can improve the performance of machine-learning models across a wide range of tasks.</p>
+<p><a class="reference external" href="https://github.com/DBC-Lab/Brain_MRI_Enhancement.git">BME-X Github Repository</a></p>
+<p><a class="reference external" href="https://hub.docker.com/repository/docker/yuesun814/bme-x/general">BME-X dockerhub Repository</a></p>
+</section>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
+<p>In structural magnetic resonance (MR) imaging, motion artifacts, low resolution, imaging noise, and variability in acquisition protocols, frequently degrade image quality and confound downstream analyses. Here we report a flexible and easy-to-implement Brain MRI Enhancement foundation (BME-X) model for the motion correction, resolution enhancement, denoising and harmonization of MR images. Our framework also exhibits the capability to estimate high-field-like (7T-like) images from 3T images, handle pathological brain MRIs with multiple sclerosis or gliomas, harmonize MRIs acquired by various scanners, and can be easily extended for “end-to-end” neuroimaging analyses, such as tissue segmentation.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_flowchart.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_flowchart.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_flowchart.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="intended-usage">
+<h2>Intended Usage<a class="headerlink" href="#intended-usage" title="Link to this heading"></a></h2>
+<p>BME-X is designed for researchers and clinicians working with structural MRIs to enhance image quality and perform standardized analyses.</p>
+<section id="motion-correction-and-super-resolution">
+<h3>Motion correction and super resolution<a class="headerlink" href="#motion-correction-and-super-resolution" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_BCP_real_images.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_BCP_real_images.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_BCP_real_images.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="performance-on-10-963-lifespan-images-from-fetal-to-adulthood">
+<h3>Performance on 10,963 lifespan images from fetal to adulthood<a class="headerlink" href="#performance-on-10-963-lifespan-images-from-fetal-to-adulthood" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_lifespan_real_images.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_lifespan_real_images.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_lifespan_real_images.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="application-on-harmonization-across-scanners-into-a-latent-common-space">
+<h3>Application on harmonization across scanners (into a latent common space)<a class="headerlink" href="#application-on-harmonization-across-scanners-into-a-latent-common-space" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_harmonization.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_harmonization.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_harmonization.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="preservation-of-small-lesions-during-enhancement">
+<h3>Preservation of small lesions during enhancement<a class="headerlink" href="#preservation-of-small-lesions-during-enhancement" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_spots.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_spots.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_spots.png" style="width: 300px;" />
+</a>
+</section>
+<section id="bias-quantification-during-reconstruction">
+<h3>Bias quantification during reconstruction<a class="headerlink" href="#bias-quantification-during-reconstruction" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_MR-ART.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_MR-ART.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/BME-X_MR-ART.png" style="width: 1000px;" />
+</a>
+<p>Enhancement results and the bias quantification for 280 in vivo corrupted T1w images from the <a class="reference external" href="https://openneuro.org/datasets/ds004173/versions/1.0.2">MR-ART</a> dataset, generated by competing methods and the BME-X model. a, Visual comparison of the enhanced results. The first and the seventh columns show in vivo corrupted images with two levels of real artifacts (i.e., HM1 and HM2) acquired from the same participant. The remaining columns show the enhanced results generated by four competing methods and the BME-X model. b, Quantitative comparison on 280 in vivo corrupted images using tissue volumes (i.e., WM, GM, CSF, ventricle, and hippocampus), mean cortical thickness, as well as the corresponding difference compared with STAND. In each box plot, the midline represents the median value, and its lower and upper edges represent the first and third quartiles. The whiskers go down to the smallest value and up to the largest. The dotted line represents the mean value or a zero value.</p>
+</section>
+</section>
+<section id="how-to-cite">
+<h2>How to cite<a class="headerlink" href="#how-to-cite" title="Link to this heading"></a></h2>
+<p>Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). <a class="reference external" href="https://doi.org/10.1038/s41551-024-01283-7">https://doi.org/10.1038/s41551-024-01283-7</a></p>
+<p>Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng (2025). <a class="reference external" href="https://doi.org/10.1038/s41551-024-01337-w">https://doi.org/10.1038/s41551-024-01337-w</a></p>
+</section>
+</section>
+<section id="installation-usage">
+<h1>Installation &amp; Usage<a class="headerlink" href="#installation-usage" title="Link to this heading"></a></h1>
+<p>We have integrated the <a class="reference external" href="https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping">LifespanStrip</a> framework and the <a class="reference external" href="https://github.com/DBC-Lab/Brain_MRI_Enhancement">BME-X</a> model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the Quality Index (QI) of the original images is provided for reference.</p>
+<section id="download">
+<h2>Download<a class="headerlink" href="#download" title="Link to this heading"></a></h2>
+<p>To pull the image, use the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-run-the-container">
+<h2>How to Run the Container<a class="headerlink" href="#how-to-run-the-container" title="Link to this heading"></a></h2>
+<section id="basic-command">
+<h3>Basic Command<a class="headerlink" href="#basic-command" title="Link to this heading"></a></h3>
+<p>Run the Docker container using the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="nb">input</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">data</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span> <span class="o">--</span><span class="n">bids_root</span> <span class="n">filename_of_BIDS_dataset</span> <span class="o">--</span><span class="n">subject_id</span> <span class="n">id_of_subject</span> <span class="o">--</span><span class="n">session_id</span> <span class="n">id_of_session</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">/path/to/input</span></code> mounts the input data directory to the container’s <code class="docutils literal notranslate"><span class="pre">/app/data</span></code> directory.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--bids_root</span></code> specifies the BIDS dataset to be processed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--subject_id</span></code> specifies a subject within the BIDS dataset to be processed (optional).</p>
+<p><code class="docutils literal notranslate"><span class="pre">--session_id</span></code> specifies a session within the BIDS dataset to be processed (optional).</p>
+</section>
+<section id="example-usage">
+<h3>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h3>
+<p>For example, using the <a class="reference external" href="https://github.com/DBC-Lab/Brain_MRI_Enhancement/tree/main/test_BIDS_raw">test_BIDS_raw</a> we provided. The following command will process all the data that meets the criteria within the <em>test_BIDS_raw</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">data</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span> <span class="o">--</span><span class="n">bids_root</span> <span class="n">test_BIDS_raw</span>
+</pre></div>
+</div>
+<p>The following command will process a specific subject when the <code class="docutils literal notranslate"><span class="pre">--subject_id</span></code> is provided (e.g. 0001).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">data</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span> <span class="o">--</span><span class="n">bids_root</span> <span class="n">test_BIDS_raw</span> <span class="o">--</span><span class="n">subject_id</span> <span class="mi">0001</span>
+</pre></div>
+</div>
+<p>The following command will process a specific session when the <code class="docutils literal notranslate"><span class="pre">--session_id</span></code> (e.g. V02) is provided.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">data</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span> <span class="o">--</span><span class="n">bids_root</span> <span class="n">test_BIDS_raw</span> <span class="o">--</span><span class="n">session_id</span> <span class="n">V02</span>
+</pre></div>
+</div>
+</section>
+<section id="help-information">
+<h3>Help Information<a class="headerlink" href="#help-information" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">data</span> <span class="n">yuesun814</span><span class="o">/</span><span class="n">bme</span><span class="o">-</span><span class="n">x</span><span class="p">:</span><span class="n">v1</span><span class="mf">.0.3</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="outputs">
+<h1>Outputs<a class="headerlink" href="#outputs" title="Link to this heading"></a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── test_BIDS_raw/
+    ├── sub-0001/
+        ├── ses-V02/
+            ├── anat/
+                ├── sub-0001_ses-V01_T2w.nii.gz
+                ├── sub-0001_ses-V01_T2w-brainmask.nii.gz
+                ├── sub-0001_ses-V01_T2w-brain-enhanced.nii.gz
+                ├── sub-0001_ses-V01_T2w-enhanced.nii.gz
+                ├── sub-0001_ses-V01_T2w-QI.txt
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/YueSun814/Img-folder/main/LifespanStrip_BME-X.png"><img alt="https://raw.githubusercontent.com/YueSun814/Img-folder/main/LifespanStrip_BME-X.png" class="align-center" src="https://raw.githubusercontent.com/YueSun814/Img-folder/main/LifespanStrip_BME-X.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="acknowledgements">
+<h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading"></a></h1>
+<p>Y.S., Limei Wang and Li Wang were supported by the National Institute of Mental Health under award numbers MH133845, MH117943, MH123202 and MH116225. G.L. was supported by the National Institutes of Health (NIH) under award numbers MH133845, MH117943, MH123202, MH116225, AG075582 and NS128534. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH. This work also uses approaches developed by NIH grants (U01MH110274 and R01MH104324) and the efforts of the UNC/UMN Baby Connectome Project Consortium. Data collection and sharing for the Alzheimer’s Disease Neuroimaging Initiative (ADNI) is funded by the National Institute on Aging (National Institutes of Health Grant U19AG024904). The grantee organization is the Northern California Institute for Research and Education. We acknowledge M. M. Pangelinan for her valuable contribution in providing the in vivo low-resolution data used for super-resolution validation. We express our sincere gratitude to all those who have supported us in the validation: J. Bernal, J. Kim, K. A. Vaughn, J. Tuulari, K. Oishi, A. Tapp, Y. Chen, X. Geng, T. F. Vaz and Z. Zariry. We also deeply appreciate all participants who contributed to the datasets involved in this work.</p>
+</section>
+<section id="get-help">
+<h1>Get Help<a class="headerlink" href="#get-help" title="Link to this heading"></a></h1>
+<p>If you encounter any issues or have concerns, please submit them here <a class="reference external" href="https://github.com/DBC-Lab/Brain_MRI_Enhancement/issues">https://github.com/DBC-Lab/Brain_MRI_Enhancement/issues</a></p>
+</section>
+<section id="license">
+<h1>License<a class="headerlink" href="#license" title="Link to this heading"></a></h1>
+<p>MIT License</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DBC_Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
