@@ -6,4 +6,4 @@ build:
     python: "3.9"   
 
 sphinx:
-  configuration: source/conf.py 
+  configuration: source/conf.py
