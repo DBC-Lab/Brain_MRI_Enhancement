@@ -6,7 +6,10 @@
 ## Documentation
 Our documentation is [here](https://brain-mri-enhancement.readthedocs.io/en/latest/).
 
-### Update (03/23/2025, yuesun814/bme-x:v1.0.3): 
+## Support
+- **Issue**: If you encounter any issues or have concerns, please submit them here https://github.com/DBC-Lab/Brain_MRI_Enhancement/issues
+ 
+## Update (03/23/2025, yuesun814/bme-x:v1.0.3): 
 We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) framework and the [BME-X](https://github.com/DBC-Lab/Brain_MRI_Enhancement.git) model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the **Quality Index (QI)** of the original images is provided for reference. Please note that the BME-X model in version v1.0.3 is the same as in v1.0.2.  
 
 <div align="center">
@@ -61,7 +64,7 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
     ```
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --help
-### Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
+## Update (03/16/2025, yuesun814/bme-x:v1.0.2): 
 We have updated the BME-X models, trained using the **PyTorch** framework, for enhancing both **T1w** and **T2w** images. The enhancement model was trained with both the **cerebrum** and **cerebellum**, and the **skull part** was reintroduced after enhancement. 
 <div align="center">
 <img src="https://github.com/YueSun814/Img-folder/blob/main/BME-X_v2.png" width="80%"> 
@@ -120,7 +123,7 @@ You can use the lifespan test data in _test_BIDS_withBrainMask_.
       --age_in_month 72 \
       --suffix T2w      
 
-### Update (12/01/2024, yuesun814/bme-x:v1.0.1): 
+## Update (12/01/2024, yuesun814/bme-x:v1.0.1): 
 We have provided a **Docker** image with all the necessary prerequisites installed for working with the BME-X model and [BIDS files](https://bids.neuroimaging.io/). The recommended CUDA version on your host is V12.2.140.
 
 To pull the image, use the following command:
@@ -357,9 +360,6 @@ Then, the screen will show:
 <img src="https://github.com/YueSun814/Img-folder/blob/main/caffe_display.jpg" width="50%">
     
 Typical install time: few minutes.
-
-## Support
-- **Issue**: If you encounter any issues or have concerns, please submit them here https://github.com/DBC-Lab/Brain_MRI_Enhancement/issues 
   
 ## License
 
