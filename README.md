@@ -25,7 +25,7 @@ To pull the image, use the following command:
 
 #### If you use yuesun814/bme-x:v1.0.3, please cite the following two papers:
 
-Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng (2024). https://doi.org/10.1038/s41551-024-01283-7
+Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng 9, 521–538 (2025). https://doi.org/10.1038/s41551-024-01283-7
 
 Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng (2025). https://doi.org/10.1038/s41551-024-01337-w
 
