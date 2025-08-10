@@ -44,6 +44,7 @@ For example, using the _test_BIDS_raw_ we provided. The following command will p
     ```
 
 The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
+   
     ```
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
@@ -57,6 +58,7 @@ The following command will process a specific subject when the ***'--subject_id'
     ```
 
 The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
+    
     ```
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
