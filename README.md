@@ -32,8 +32,7 @@ The corresponding source files are located in https://www.dropbox.com/scl/fo/u3m
 ### Example Usage:
    
 For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
-
-    ```    
+ 
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
       -v /Local/path/to/the/inputs:/data \
@@ -43,7 +42,6 @@ For example, using the _test_BIDS_raw_ we provided. The following command will p
       --data_base /data \
       --output_dir /results
   
-    ```
 
 The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
    
