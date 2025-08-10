@@ -27,7 +27,7 @@ To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.4
     
-Example Usage:
+### Example Usage:
    
 For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
 
