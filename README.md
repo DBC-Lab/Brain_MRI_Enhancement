@@ -12,13 +12,45 @@ Our documentation is [here](https://brain-mri-enhancement.readthedocs.io/en/late
 ## Contributing
 We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
 
-## Update (07/29/2025, yuesun814/bme-x:v1.0.4)
+## If you find it useful, please kindly cite:
 
-Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
+Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng 9, 521–538 (2025). https://doi.org/10.1038/s41551-024-01283-7
+
+Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng 9, 700–715 (2025). https://doi.org/10.1038/s41551-024-01337-w
+
+## Update (08/10/2025, yuesun814/bme-x:v1.0.4)
+
+1. Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
+2. Add a --output_dir flag to specify the output directory; create it if missing and write all outputs there.
 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.4
+    
+Example Usage
+   
+    For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
+
+    ```    
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.4 \
+      --bids_root test_BIDS_raw \
+      --data_base /data \
+      --output_dir /results
+  
+    ```
+
+    The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
+    ```
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --subject_id 0001
+    ```
+
+    The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
+    ```
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --session_id V02
     
 ## Update (03/23/2025, yuesun814/bme-x:v1.0.3)
 We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) framework and the [BME-X](https://github.com/DBC-Lab/Brain_MRI_Enhancement.git) model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the **Quality Index (QI)** of the original images is provided for reference. Please note that the BME-X model in version v1.0.3 is the same as in v1.0.2.  
@@ -30,12 +62,6 @@ We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowe
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.3
-
-#### If you use yuesun814/bme-x:v1.0.3, please cite the following two papers:
-
-Sun, Y., Wang, L., Li, G. et al. A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks. Nat. Biomed. Eng 9, 521–538 (2025). https://doi.org/10.1038/s41551-024-01283-7
-
-Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng 9, 700–715 (2025). https://doi.org/10.1038/s41551-024-01337-w
 
 #### How to Run the Container
 
@@ -57,7 +83,7 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 
 2. Example Usage
    
-    For example, using the _test_BIDS_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
+    For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
 
     ```
     docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw
