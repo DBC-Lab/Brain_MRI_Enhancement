@@ -22,12 +22,11 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 
 1. Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
 2. Add a --output_dir flag to specify the output directory; create it if missing and write all outputs there.
+3. The corresponding source files (PyTorch versions) are released in https://www.dropbox.com/scl/fo/u3mmxel77li32fu4x1olw/AKJKLzGGaCNNuJc2e4BpXG0?rlkey=ccn5wh5hc2lldar35qap6or5u&st=bcvq0juo&dl=0
 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.4
-
-The corresponding source files are located in https://www.dropbox.com/scl/fo/u3mmxel77li32fu4x1olw/AKJKLzGGaCNNuJc2e4BpXG0?rlkey=ccn5wh5hc2lldar35qap6or5u&st=bcvq0juo&dl=0
     
 ### Example Usage:
    
