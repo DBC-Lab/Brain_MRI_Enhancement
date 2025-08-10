@@ -27,9 +27,9 @@ To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.4
     
-Example Usage
+Example Usage:
    
-    For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
+For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
 
     ```    
     mkdir -p /Local/path/to/the/outputs && \
@@ -43,14 +43,31 @@ Example Usage
   
     ```
 
-    The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
+The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --subject_id 0001
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.4 \
+      --bids_root test_BIDS_raw \
+      --data_base /data \
+      --output_dir /results \
+      --subject_id 0001
     ```
 
-    The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
+The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     ```
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --session_id V02
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.4 \
+      --bids_root test_BIDS_raw \
+      --data_base /data \
+      --output_dir /results \
+      --session_id V02
+    ```
     
 ## Update (03/23/2025, yuesun814/bme-x:v1.0.3)
 We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) framework and the [BME-X](https://github.com/DBC-Lab/Brain_MRI_Enhancement.git) model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the **Quality Index (QI)** of the original images is provided for reference. Please note that the BME-X model in version v1.0.3 is the same as in v1.0.2.  
