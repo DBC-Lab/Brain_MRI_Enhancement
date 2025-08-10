@@ -26,6 +26,8 @@ Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping 
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.4
+
+The corresponding source files are located in https://www.dropbox.com/scl/fo/u3mmxel77li32fu4x1olw/AKJKLzGGaCNNuJc2e4BpXG0?rlkey=ccn5wh5hc2lldar35qap6or5u&st=bcvq0juo&dl=0
     
 ### Example Usage:
    
