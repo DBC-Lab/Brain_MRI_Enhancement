@@ -42,10 +42,8 @@ For example, using the _test_BIDS_raw_ we provided. The following command will p
       --data_base /data \
       --output_dir /results
   
-
 The following command will process a specific subject when the ***'--subject_id'*** is provided (e.g. 0001).
    
-    ```
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
       -v /Local/path/to/the/inputs:/data \
@@ -55,11 +53,9 @@ The following command will process a specific subject when the ***'--subject_id'
       --data_base /data \
       --output_dir /results \
       --subject_id 0001
-    ```
 
 The following command will process a specific session when the ***'--session_id'*** (e.g. V02) is provided.
     
-    ```
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
       -v /Local/path/to/the/inputs:/data \
@@ -69,7 +65,6 @@ The following command will process a specific session when the ***'--session_id'
       --data_base /data \
       --output_dir /results \
       --session_id V02
-    ```
     
 ## Update (03/23/2025, yuesun814/bme-x:v1.0.3)
 We have integrated the [LifespanStrip](https://github.com/DBC-Lab/Atlases-empowered_Lifespan_Skull_Stripping.git) framework and the [BME-X](https://github.com/DBC-Lab/Brain_MRI_Enhancement.git) model into a single Docker image to make it more convenient for everyone to use. By inputting T1w/T2w raw images, this pipeline goes through RAI orientation, intensity inhomogeneity correction, skull stripping, and image enhancement for the brain region. Additionally, the **Quality Index (QI)** of the original images is provided for reference. Please note that the BME-X model in version v1.0.3 is the same as in v1.0.2.  
