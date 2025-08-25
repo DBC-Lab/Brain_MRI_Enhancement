@@ -26,13 +26,13 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 
 3. Standardized filenames (BIDS derivatives style):
 
-Unprocessed copy: sub-<ID>_ses-<ID>_<T1w|T2w>.nii.gz
+    Unprocessed copy: sub-<ID>_ses-<ID>_<T1w|T2w>.nii.gz
 
-Enhanced (no skull strip): sub-<ID>_ses-<ID>_desc-preproc_<T1w|T2w>.nii.gz
+    Enhanced (no skull strip): sub-<ID>_ses-<ID>_desc-preproc_<T1w|T2w>.nii.gz
 
-Optional skull-stripped enhanced: sub-<ID>_ses-<ID>_desc-enhanced_<T1w|T2w>.nii.gz
+    Skull-stripped enhanced: sub-<ID>_ses-<ID>_desc-enhanced_<T1w|T2w>.nii.gz
 
-Brain mask: sub-<ID>_ses-<ID>_desc-brain_mask.nii.gz
+    Brain mask: sub-<ID>_ses-<ID>_desc-brain_mask.nii.gz
 
 4. CLI change: --data_base now defaults to an empty string; path handling made robust for absolute/relative --bids_root.
 
