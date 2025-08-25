@@ -40,8 +40,20 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.5
+    
+### Example Usage:
 
-For usage instructions, please see: https://github.com/DBC-Lab/Brain_MRI_Enhancement?tab=readme-ov-file#example-usage 
+For example, using the _test_BIDS_raw_ we provided. The following command will process all the data that meets the criteria within the _test_BIDS_raw_.
+ 
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.5 \
+      --bids_root /data/test_BIDS_raw \
+      --output_dir /results
+
+For more usage instructions, please see: https://github.com/DBC-Lab/Brain_MRI_Enhancement?tab=readme-ov-file#example-usage 
     
 ## Update (08/10/2025, yuesun814/bme-x:v1.0.4)
 
