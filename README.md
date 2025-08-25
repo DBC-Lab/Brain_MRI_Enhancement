@@ -20,9 +20,27 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 
 ## Update (08/25/2025, yuesun814/bme-x:v1.0.5)
 
-1. Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
-2. Add a --output_dir flag to specify the output directory; create it if missing and write all outputs there.
-3. The corresponding source files (PyTorch version) are released in https://www.dropbox.com/scl/fo/u3mmxel77li32fu4x1olw/AKJKLzGGaCNNuJc2e4BpXG0?rlkey=ccn5wh5hc2lldar35qap6or5u&st=bcvq0juo&dl=0
+1. Added a sidecar JSON for every NIfTI with fields: Sources (list of bids:raw: paths), SpatialReference (bids:raw: path), SkullStripped (true/false), Type: "Brain", and Quality Index (QI): {"QI": {"value": <0..1>, "description": "Quality index [0,1]..."}}
+
+     Brain mask JSON now includes Type: "Brain".
+
+Wrote top-level dataset_description.json:
+
+{"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}
+
+Standardized filenames (BIDS derivatives style):
+
+Unprocessed copy: sub-<ID>_ses-<ID>_<T1w|T2w>.nii.gz
+
+Enhanced (no skull strip): sub-<ID>_ses-<ID>_desc-preproc_<T1w|T2w>.nii.gz
+
+Optional skull-stripped enhanced: sub-<ID>_ses-<ID>_desc-enhanced_<T1w|T2w>.nii.gz
+
+Brain mask: sub-<ID>_ses-<ID>_desc-brain_mask.nii.gz
+
+Optional descriptions.tsv support to document desc-* terms (not required).
+
+CLI change: --data_base now defaults to an empty string; path handling made robust for absolute/relative --bids_root.
 
 To pull the image, use the following command:
 
