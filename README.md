@@ -35,6 +35,7 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
     Brain mask: sub-<ID>_ses-<ID>_desc-brain_mask.nii.gz
 
 4. CLI change: --data_base now defaults to an empty string; path handling made robust for absolute/relative --bids_root.
+5. Intensity rescaling: Added a rescaling step to ensure consistent intensity ranges across vendors (e.g., Philips).
 
 To pull the image, use the following command:
 
