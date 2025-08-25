@@ -39,6 +39,8 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.5
+
+For usage instructions, please see: https://github.com/DBC-Lab/Brain_MRI_Enhancement?tab=readme-ov-file#example-usage 
     
 ## Update (08/10/2025, yuesun814/bme-x:v1.0.4)
 
