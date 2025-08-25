@@ -51,9 +51,7 @@ For example, using the _test_BIDS_raw_ we provided. The following command will p
       -v /Local/path/to/the/outputs:/results \
       yuesun814/bme-x:v1.0.5 \
       --bids_root /data/test_BIDS_raw \
-      --output_dir /results \
-      --subject_id 0001 (optional) \ 
-      --session_id V02 (optional)  
+      --output_dir /results 
 
 For more usage instructions, please see: https://github.com/DBC-Lab/Brain_MRI_Enhancement?tab=readme-ov-file#example-usage 
     
