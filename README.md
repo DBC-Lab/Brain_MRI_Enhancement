@@ -18,6 +18,16 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 
 2. Wang, L., Sun, Y., Seidlitz, J. et al. A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases. Nat. Biomed. Eng 9, 700–715 (2025). https://doi.org/10.1038/s41551-024-01337-w
 
+## Update (08/25/2025, yuesun814/bme-x:v1.0.5)
+
+1. Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
+2. Add a --output_dir flag to specify the output directory; create it if missing and write all outputs there.
+3. The corresponding source files (PyTorch version) are released in https://www.dropbox.com/scl/fo/u3mmxel77li32fu4x1olw/AKJKLzGGaCNNuJc2e4BpXG0?rlkey=ccn5wh5hc2lldar35qap6or5u&st=bcvq0juo&dl=0
+
+To pull the image, use the following command:
+
+    docker pull yuesun814/bme-x:v1.0.5
+    
 ## Update (08/10/2025, yuesun814/bme-x:v1.0.4)
 
 1. Replacing relative paths (e.g., ./...) with absolute paths (e.g., /...) to ensure correct resolution within the container environment.
