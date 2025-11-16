@@ -118,23 +118,35 @@ Example Usage
 
 For example, using the `test_BIDS_raw <https://github.com/DBC-Lab/Brain_MRI_Enhancement/tree/main/test_BIDS_raw>`_ we provided. The following command will process all the data that meets the criteria within the *test_BIDS_raw*. ::
 
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw
     mkdir -p /Local/path/to/the/outputs && \
     docker run --rm --gpus all -u $(id -u):$(id -g) \
       -v /Local/path/to/the/inputs:/data \
       -v /Local/path/to/the/outputs:/results \
       yuesun814/bme-x:v1.0.5 \
       --bids_root test_BIDS_raw \
-      --data_base /data \
       --output_dir /results
     
 The following command will process a specific subject when the ``--subject_id`` is provided (e.g. 0001). ::
    
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw --subject_id 0001 
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.5 \
+      --bids_root test_BIDS_raw \
+      --output_dir /results \
+      --subject_id 0001
     
 The following command will process a specific session when the ``--session_id`` (e.g. V02) is provided. ::
     
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw --session_id V02
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.5 \
+      --bids_root test_BIDS_raw \
+      --output_dir /results \
+      --session_id V02
     
 Help Information
 ^^^^^^^^^^^^^^^^^^
@@ -173,7 +185,7 @@ The sidecar JSON for every NIfTI with fields: Sources (list of bids:raw: paths),
 
 ``sub-0001_ses-V01_T2w.nii.gz`` 
 T1w/T2w.nii.gz files are raw anats copied from the input data to the derivatives.
-    
+
 ==================
 Acknowledgements
 ==================
