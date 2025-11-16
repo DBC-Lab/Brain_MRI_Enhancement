@@ -163,8 +163,11 @@ Outputs
                     ├── sub-0001_ses-V01_desc-enhanced_T2w.json
 
 ``dataset_description.json`` {"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}
+
 ``descriptions.tsv`` describes the meaning of derivative files.
+
 ``sub-*.json`` a sidecar JSON for every NIfTI with fields: Sources (list of bids:raw: paths), SpatialReference (bids:raw: path), SkullStripped (true/false), Type (Brain), and Quality Index (QI): {"QI": {"value": <0..1>, "description": "Quality index [0,1]..."}}
+
 ``sub-0001_ses-V01_T2w.nii.gz`` T1w/T2w.nii.gz files are raw anats copied from the input data to the derivatives.
     
 ==================
