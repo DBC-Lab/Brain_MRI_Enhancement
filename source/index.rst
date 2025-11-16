@@ -163,10 +163,6 @@ Outputs
                     ├── sub-0001_ses-V01_desc-enhanced_T2w.json
 
 ``dataset_description.json`` {"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}
-  
-.. image:: https://raw.githubusercontent.com/YueSun814/Img-folder/main/LifespanStrip_BME-X.png
-   :width: 1000px
-   :align: center   
     
 ==================
 Acknowledgements
