@@ -140,7 +140,7 @@ Help Information
 ^^^^^^^^^^^^^^^^^^
 ::
 
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --help
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --help
 
 ========
 Outputs
