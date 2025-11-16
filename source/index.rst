@@ -89,7 +89,7 @@ Download
 
 To pull the image, use the following command ::
 
-    docker pull yuesun814/bme-x:v1.0.3
+    docker pull yuesun814/bme-x:v1.0.5
   
 How to Run the Container
 ------------------------- 
@@ -99,11 +99,14 @@ Basic Command
 
 Run the Docker container using the following command ::
 
-    docker run --gpus all -v /path/to/input:/app/data yuesun814/bme-x:v1.0.3 --bids_root filename_of_BIDS_dataset --subject_id id_of_subject --session_id id_of_session
-
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+        -v /Local/path/to/the/inputs:/data \
+        -v /Local/path/to/the/outputs:/results \
+        yuesun814/bme-x:v1.0.5 \
+        --bids_root /data/test_BIDS_raw \
+        --output_dir /results 
    
-``-v /path/to/input`` mounts the input data directory to the container's ``/app/data`` directory.
-
 ``--bids_root`` specifies the BIDS dataset to be processed.
 
 ``--subject_id`` specifies a subject within the BIDS dataset to be processed (optional).
@@ -115,15 +118,23 @@ Example Usage
 
 For example, using the `test_BIDS_raw <https://github.com/DBC-Lab/Brain_MRI_Enhancement/tree/main/test_BIDS_raw>`_ we provided. The following command will process all the data that meets the criteria within the *test_BIDS_raw*. ::
 
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw
+    mkdir -p /Local/path/to/the/outputs && \
+    docker run --rm --gpus all -u $(id -u):$(id -g) \
+      -v /Local/path/to/the/inputs:/data \
+      -v /Local/path/to/the/outputs:/results \
+      yuesun814/bme-x:v1.0.5 \
+      --bids_root test_BIDS_raw \
+      --data_base /data \
+      --output_dir /results
     
 The following command will process a specific subject when the ``--subject_id`` is provided (e.g. 0001). ::
    
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --subject_id 0001 
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw --subject_id 0001 
     
 The following command will process a specific session when the ``--session_id`` (e.g. V02) is provided. ::
     
-    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.3 --bids_root test_BIDS_raw --session_id V02
+    docker run --gpus all -v /home/user/data:/app/data yuesun814/bme-x:v1.0.5 --bids_root test_BIDS_raw --session_id V02
     
 Help Information
 ^^^^^^^^^^^^^^^^^^
