@@ -148,14 +148,21 @@ Outputs
 ::
 
     ├── test_BIDS_raw/
+        ├── dataset_description.json
+        ├── descriptions.tsv
         ├── sub-0001/
             ├── ses-V02/
                 ├── anat/
                     ├── sub-0001_ses-V01_T2w.nii.gz
-                    ├── sub-0001_ses-V01_T2w-brainmask.nii.gz
-                    ├── sub-0001_ses-V01_T2w-brain-enhanced.nii.gz
-                    ├── sub-0001_ses-V01_T2w-enhanced.nii.gz
-                    ├── sub-0001_ses-V01_T2w-QI.txt
+                    ├── sub-0001_ses-V01_T2w.json
+                    ├── sub-0001_ses-V01_desc-brain_mask.nii.gz
+                    ├── sub-0001_ses-V01_desc-brain_mask.json
+                    ├── sub-0001_ses-V01_desc-preproc_T2w.nii.gz
+                    ├── sub-0001_ses-V01_desc-preproc_T2w.json
+                    ├── sub-0001_ses-V01_desc-enhanced_T2w.nii.gz
+                    ├── sub-0001_ses-V01_desc-enhanced_T2w.json
+
+``dataset_description.json`` {"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}
   
 .. image:: https://raw.githubusercontent.com/YueSun814/Img-folder/main/LifespanStrip_BME-X.png
    :width: 1000px
