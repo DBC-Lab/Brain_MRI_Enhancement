@@ -1,0 +1,75 @@
+from torch.autograd import Variable
+from collections import OrderedDict
+import util.util as util
+from .base_model import BaseModel
+from . import networks
+
+
+class TestModel(BaseModel):
+    def name(self):
+        return 'TestModel'
+
+    def initialize(self, opt):
+        assert(not opt.isTrain)
+        BaseModel.initialize(self, opt)
+        self.input_A = self.Tensor(opt.batchSize, opt.input_nc, opt.fineSize, opt.fineSize)
+
+        self.netG = networks.define_G(opt.input_nc, opt.output_nc,
+                                      opt.ngf, opt.which_model_netG,
+                                      opt.norm, not opt.no_dropout,
+                                      self.gpu_ids)
+        which_epoch = opt.which_epoch
+        self.load_network(self.netG, 'G_A', which_epoch)
+
+        print('---------- Networks initialized -------------')
+        networks.print_network(self.netG)
+        print('-----------------------------------------------')
+
+    def set_input(self, input):
+        # we need to use single_dataset mode
+        input_A = input['A']
+        self.input_A.resize_(input_A.size()).copy_(input_A)
+        self.image_paths = input['A_paths']
+
+        self.input_B = input['B']
+    
+    def test(self):
+        img_size = self.input_A.size()[2:]
+        stride = 2
+        patchsize = 32
+        fake_B = self.input_A.clone()
+        fake_B.zero_()
+        fake_B_count = fake_B.clone()
+        list0 = list(range(0, img_size[0]-patchsize, stride))
+        list1 = list(range(0, img_size[1]-patchsize, stride))
+        list2 = list(range(0, img_size[2]-patchsize, stride))
+        list0.append(img_size[0]-patchsize)
+        list1.append(img_size[1]-patchsize)
+        list2.append(img_size[2]-patchsize)
+        for k0 in list0:
+            
+            for k1 in list1:
+                for k2 in list2:
+                    input_A_patch = self.input_A[:,:,k0:k0+patchsize, k1:k1+patchsize, k2:k2+patchsize]
+                    real_A_patch = Variable(input_A_patch, volatile=True)
+                    fake_B_patch = self.netG.forward(real_A_patch).data
+                    fake_B[:,:,k0:k0+patchsize, k1:k1+patchsize, k2:k2+patchsize] += fake_B_patch
+                    fake_B_count[:,:,k0:k0+patchsize, k1:k1+patchsize, k2:k2+patchsize] += 1
+        fake_B /= fake_B_count
+        self.fake_B = fake_B
+
+    '''
+    def test(self):
+        self.real_A = Variable(self.input_A, volatile=True)
+        self.fake_B = self.netG.forward(self.real_A)
+    '''
+
+    # get image paths
+    def get_image_paths(self):
+        return self.image_paths
+
+    def get_current_visuals(self):
+        real_A = util.tensor2im(self.input_A)
+        fake_B = util.tensor2im(self.fake_B)
+        ground_B = util.tensor2im(self.input_B)
+        return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('ground_B', ground_B)])

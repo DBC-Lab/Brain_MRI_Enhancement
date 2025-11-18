@@ -1,0 +1,1165 @@
+nohup: ignoring input
+------------ Options -------------
+age_in_month: 6
+batchSize: 9
+beta1: 0.1
+bids_root: HBCD_bids_for_li_Dec12_2024
+checkpoints_dir: ./checkpoints
+continue_train: False
+dataset_mode: seg
+display_freq: 100
+display_id: 0
+display_port: 8097
+display_single_pane_ncols: 0
+display_winsize: 256
+downsampling_rate: 1
+epoch_count: 1
+epochs: 30
+fineSize: 256
+gpu_ids: [0]
+identity: 0.5
+input_nc: 1
+input_path: None
+isTrain: True
+loadSize: 286
+lr: 0.005
+max_dataset_size: inf
+model: seg
+model_save_dir: ./checkpoints/
+momentum: 0.9
+nThreads: 2
+n_layers_D: 3
+name: experiment_name
+ndf: 64
+ngf: 64
+niter: 100
+niter_decay: 100
+no_dropout: False
+no_flip: False
+no_html: False
+norm: instance
+normValue: 1.0
+optimizer: SGD
+output_nc: 1
+output_path: None
+patchSize: 32
+phase: train
+pool_size: 50
+print_freq: 1
+resize_or_crop: none
+run_name: segmentation
+save_epoch_freq: 5
+save_latest_freq: 1000
+scheduler: StepLR
+scheduler_gamma: 0.1
+scheduler_step: 1
+serial_batches: False
+session_id: 
+shuffle: True
+subject_id: 
+suffix: None
+which_direction: AtoB
+which_epoch: latest
+-------------- End ----------------
+Found 50 files in the dataset
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499/ses-V02/anat/sub-170499_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e307c0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e307c0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Any labeled images will be returned as a boolean array. Did you mean to use a boolean array?
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499/ses-V02/anat/sub-170499_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499/ses-V02/anat/sub-170499_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499/ses-V03/anat/sub-170499_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499/ses-V03/anat/sub-170499_ses-V03_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 170499
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-170499_ses-V03_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V02/anat/sub-172232_ses-V02_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V02/anat/sub-172232_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V02/anat/sub-172232_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V02/anat/sub-172232_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V02/anat/sub-172232_ses-V02_run-4_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V03/anat/sub-172232_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232/ses-V03/anat/sub-172232_ses-V03_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V02_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c831dae0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V02_run-4_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 172232
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-172232_ses-V03_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632/ses-V02/anat/sub-407632_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632/ses-V02/anat/sub-407632_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632/ses-V02/anat/sub-407632_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 407632
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-407632_ses-V02_run-3_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 685003
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-685003/ses-V02/anat/sub-685003_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 685003
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-685003/ses-V03/anat/sub-685003_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 685003
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-685003_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 685003
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-685003_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 696702
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-696702/ses-V02/anat/sub-696702_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 696702
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-696702_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 714708
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-714708/ses-V02/anat/sub-714708_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 714708
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-714708_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e311e37a50): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 802533
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-802533/ses-V02/anat/sub-802533_ses-V02_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 802533
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-802533/ses-V02/anat/sub-802533_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 802533
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-802533_ses-V02_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 802533
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-802533_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563/ses-V02/anat/sub-886563_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3cfc228d0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3cfc228d0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563/ses-V02/anat/sub-886563_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563/ses-V03/anat/sub-886563_ses-V03_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c8900000): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563/ses-V03/anat/sub-886563_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aa3ca940): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563_ses-V02_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c892e560): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V02
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563_ses-V02_run-2_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3aaef3e70): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563_ses-V03_run-1_T1w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3cfc228d0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3cfc228d0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------
+Subject ID: 886563
+Session ID: V03
+Processing file: /mnt/dbc2/limeiw/HBCD_bids_for_li_Dec12_2024/sub-886563_ses-V03_run-1_T2w.nii.gz
+Reorient to RAI direction
+Bias correction (N4)
+Downsample to 1.6*1.6*1.6
+Histogram matching
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/NIFTI/src/itkNiftiImageIO.cxx, line 1023
+NiftiImageIO (0x61e3c87d35e0): ./Template/template.hdr is Analyze file and it's deprecated 
+
+Skull stripping
+Upsample to original space
+Save brainmask
+participants_tsv_age: HBCD_bids_for_li_Dec12_2024/participants.tsv None
+-----------------------------------------------------
+|                                                   |
+|   Skipping BME-X! Age information is required!    |
+|                                                   |
+-----------------------------------------------------

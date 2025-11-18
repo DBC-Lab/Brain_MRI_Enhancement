@@ -1,0 +1,13 @@
+bids==0.0
+monai==0.7.0
+numpy==1.24.4
+pybids==0.17.2
+scipy==1.10.1
+SimpleITK==2.4.0
+scikit-image
+tensorboardX==2.6.2.2
+torch==1.13.1
+einops==0.8.0
+nipype
+tqdm
+colorama
