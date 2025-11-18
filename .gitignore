@@ -1,2 +1,6 @@
 BME_X/checkpoints/
 *.pt
+__pycache__/
+*.pyc
+.DS_Store
+*~
