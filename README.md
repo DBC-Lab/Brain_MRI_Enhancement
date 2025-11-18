@@ -24,6 +24,8 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 
 2. Wrote top-level dataset_description.json: `{"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}`
 
+(Since bme-x:v1.0.4 and bme-x:v1.0.5 share the same pre-trained models, we use bme-x:v1.0.4 here.)
+
 3. Standardized filenames (BIDS derivatives style):
 
     Unprocessed copy: `sub-<ID>_ses-<ID>*_<T1w|T2w>.nii.gz`
