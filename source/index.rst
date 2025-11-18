@@ -177,6 +177,8 @@ Outputs
 ``dataset_description.json`` 
 {"Name":"BME-X Outputs","BIDSVersion":"1.10.0","DatasetType":"derivative","GeneratedBy":[{"Name":"BME-X","Version":"v1.0.4","Container":{"Type":"docker","Tag":"yuesun814/bme-x:v1.0.4"}}]}
 
+(Since bme-x:v1.0.4 and bme-x:v1.0.5 share the same pre-trained models, we use bme-x:v1.0.4 here.)
+
 ``descriptions.tsv`` 
 The meaning of derivative files.
 
