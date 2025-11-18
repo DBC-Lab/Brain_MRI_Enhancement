@@ -42,6 +42,8 @@ We welcome contributions! Please check out our [CONTRIBUTING.md](CONTRIBUTING.md
 To pull the image, use the following command:
 
     docker pull yuesun814/bme-x:v1.0.5
+
+***The corresponding source code has been updated on this GitHub repository.***
     
 ### Example Usage:
 
