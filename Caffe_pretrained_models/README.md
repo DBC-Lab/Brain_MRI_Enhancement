@@ -1,23 +1,15 @@
-Please download template files from https://www.dropbox.com/scl/fo/ak1shjeg5z0tcfanno3c5/h?rlkey=h548qw6lvs3ufjren2okd61ln&dl=0
+## Deploy setting
 
-These template files are used for ***histogram matching*** before testing an image. 
+_deploy.prototxt/deploy1.prototxt_: a deploy file used for testing stage, note that in the testing phase, you have to change "use_global_stats: false" to "use_global_stats: true". 
 
-## T2-weighted images:
+## Pretrained models:
 
-Template_T2_fetal.nii: templates for testing images at the fetal stage. 
+Please download models from [https://www.dropbox.com/scl/fi/ebarde3a4a51bhln3l422/reconstruction_fetal_T2.caffemodel?rlkey=r42d8q4rf57rwhbdg97p3evue&st=v0tjodhh&dl=0 ](https://www.dropbox.com/scl/fo/jkaoez96guhnnd39qmt96/ACc8JoYPflw_pDpjKvv1-dw?rlkey=904z1tlyw2dhb3b76m25s4utt&st=wgfp703y&dl=0)
 
-## T1-weighted images:
+_reconstruction_??m_T1.caffemodel_: pretrained models used to test T1-weighted images at ?? months. 
 
-Template_T1_0.nii: templates for testing images at 0 month. 
+_reconstruction_fetal_T2.caffemodel_: pretrained models used to test T2-weighted images at the fetal stage. 
 
-Template_T1_3.nii: templates for testing images at 3 months.
+## Adult images: 
 
-Template_T1_6.nii: templates for testing images at 6 months.
-
-Template_T1_9.nii: templates for testing images at 9 months.
-
-Template_T1_12.nii: templates for testing images at 12 months.
-
-Template_T1_18.nii: templates for testing images at 18 months.
-
-Template_T1_24.nii: templates for testing images at 24 months and older.
+Please use _reconstruction_24m_T1.caffemodel_ to test adult T1-weighted images. 
